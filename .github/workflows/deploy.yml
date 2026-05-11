@@ -1,0 +1,48 @@
+# GitHub Actions: 自动构建并部署 MkDocs Material 站点到 GitHub Pages
+# 触发条件: 每次 push 到 main 分支时自动运行
+# 无需手动操作，更新 Markdown 文件后 git push 即可
+
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main      # 主分支 push 时触发
+      - master    # 兼容旧命名
+  workflow_dispatch:  # 也支持手动触发（GitHub 网页上点按钮）
+
+permissions:
+  contents: write    # 允许写入 gh-pages 分支
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. 设置 Python 环境
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. 安装依赖（MkDocs + Material + 插件）
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-minify-plugin
+
+      # 4. 构建并部署到 GitHub Pages
+      # mkdocs.yml 在仓库根目录（面试学习文件夹/ 作为仓库根）
+      - name: Build and Deploy
+        run: mkdocs gh-deploy --force --config-file mkdocs.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

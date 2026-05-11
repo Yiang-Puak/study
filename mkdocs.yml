@@ -1,0 +1,144 @@
+# AI 面试冲刺手册 —— MkDocs Material 站点配置
+# 使用: mkdocs serve (本地预览) / mkdocs gh-deploy (手动部署)
+# GitHub Actions 会自动部署，无需手动操作
+# MkDocs 配置文件
+# docs_dir 指向 docs/ 目录（MkDocs 标准结构）
+
+site_name: AI 面试冲刺手册
+site_description: Python、AI Agent、Git 面试学习材料
+site_author: YB200
+copyright: Copyright &copy; 2026 YB200
+
+docs_dir: docs
+
+# 如果使用 GitHub Pages 自定义域名，取消下面注释
+# site_url: https://你的用户名.github.io/仓库名/
+
+theme:
+  name: material
+  language: zh
+  palette:
+    # 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs            # 顶部标签导航
+    - navigation.sections        # 章节折叠
+    - navigation.expand          # 默认展开导航
+    - navigation.indexes         # 章节索引页
+    - search.suggest             # 搜索建议
+    - search.highlight           # 高亮搜索结果
+    - content.code.copy          # 代码块复制按钮
+    - content.code.annotate      # 代码注释
+
+plugins:
+  - search:
+      lang: zh
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YB200
+
+nav:
+  - 首页: docs/面试冲刺手册.md
+
+  - AI Agent 面试实践:
+    - 学习进度跟踪: docs/AI Agent面试实践/学习进度跟踪.md
+    - 遗漏检查报告: docs/AI Agent面试实践/遗漏检查报告.md
+    - 01 Agent 基础架构:
+      - 核心概念与面试答题模板: docs/AI Agent面试实践/01_Agent基础架构/01_核心概念与面试答题模板.md
+      - ReAct Agent 代码实践: docs/AI Agent面试实践/01_Agent基础架构/02_ReAct_Agent_代码实践.md
+      - MultiAgent 协作实践: docs/AI Agent面试实践/01_Agent基础架构/03_MultiAgent_协作实践.md
+      - 进阶面试真题与深度解析: docs/AI Agent面试实践/01_Agent基础架构/04_进阶面试真题与深度解析.md
+    - 02 记忆系统:
+      - 核心概念与面试答题模板: docs/AI Agent面试实践/02_记忆系统/01_核心概念与面试答题模板.md
+      - 记忆系统代码实践: docs/AI Agent面试实践/02_记忆系统/02_记忆系统_代码实践.md
+    - 03 RAG 检索增强:
+      - 核心概念与面试答题模板: docs/AI Agent面试实践/03_RAG检索增强/01_核心概念与面试答题模板.md
+      - RAG 完整链路代码实践: docs/AI Agent面试实践/03_RAG检索增强/02_RAG完整链路_代码实践.md
+    - 04 LangChain / LangGraph:
+      - 核心概念与面试答题模板: docs/AI Agent面试实践/04_LangChain_LangGraph/01_核心概念与面试答题模板.md
+      - LangGraph 多 Agent 工作流: docs/AI Agent面试实践/04_LangChain_LangGraph/02_LangGraph_多Agent工作流.md
+    - 05 模型微调与性能优化:
+      - 核心概念与面试答题模板: docs/AI Agent面试实践/05_模型微调与性能优化/01_核心概念与面试答题模板.md
+    - 06 Prompt 工程与 AI 编程工具:
+      - 核心概念与面试答题模板: docs/AI Agent面试实践/06_Prompt工程与AI编程工具/01_核心概念与面试答题模板.md
+    - 07 Harness 工程深入:
+      - Harness 核心理念与面试考点: docs/AI Agent面试实践/07_Harness工程深入/01_Harness核心理念与面试考点.md
+      - Harness 代码实践: docs/AI Agent面试实践/07_Harness工程深入/02_Harness代码实践_Subagent与DispatchMap.md
+    - 08 模拟面试题与答案:
+      - 综合模拟面试题库: docs/AI Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md
+
+  - Python 面试实践:
+    - 学习进度跟踪: docs/Python面试实践/Python学习进度跟踪.md
+    - 00 零基础入门:
+      - 学习进度: docs/Python面试实践/00_零基础入门/00_零基础学习进度.md
+      - 01 变量与数据类型: docs/Python面试实践/00_零基础入门/01_变量与数据类型.md
+      - 02 输入输出与运算符: docs/Python面试实践/00_零基础入门/02_输入输出与运算符.md
+      - 03 条件判断: docs/Python面试实践/00_零基础入门/03_条件判断.md
+      - 04 循环: docs/Python面试实践/00_零基础入门/04_循环.md
+      - 05 字符串操作详解: docs/Python面试实践/00_零基础入门/05_字符串操作详解.md
+      - 06 函数基础: docs/Python面试实践/00_零基础入门/06_函数基础.md
+    - 01 Python 语言特性:
+      - 核心概念与面试答题模板: docs/Python面试实践/01_Python语言特性/01_核心概念与面试答题模板.md
+      - 高级特性代码实践: docs/Python面试实践/01_Python语言特性/02_高级特性代码实践.md
+    - 02 数据结构与常用库:
+      - 内置数据结构从入门到面试: docs/Python面试实践/02_数据结构与常用库/01_内置数据结构从入门到面试.md
+      - 常用标准库详解: docs/Python面试实践/02_数据结构与常用库/02_常用标准库详解.md
+    - 03 面试高频手撕题:
+      - 01 最长不重复子串: docs/Python面试实践/03_面试高频手撕题/01_最长不重复子串.md
+      - 02 快速排序: docs/Python面试实践/03_面试高频手撕题/02_快速排序.md
+      - 03 LRU 缓存: docs/Python面试实践/03_面试高频手撕题/03_LRU缓存.md
+      - 04 判断 BST 合法性: docs/Python面试实践/03_面试高频手撕题/04_判断BST合法性.md
+      - 05 TopK 问题: docs/Python面试实践/03_面试高频手撕题/05_TopK问题.md
+      - 06 二分查找: docs/Python面试实践/03_面试高频手撕题/06_二分查找.md
+      - 07 动态规划_爬楼梯: docs/Python面试实践/03_面试高频手撕题/07_动态规划_爬楼梯.md
+    - 04 Python 进阶面试题:
+      - 进阶面试真题与深度解析: docs/Python面试实践/04_Python进阶面试题/01_进阶面试真题与深度解析.md
+
+  - Git 面试实践:
+    - 01 核心概念与面试答题模板: docs/Git面试实践/01_核心概念与面试答题模板.md
+    - 02 Git 进阶与实战: docs/Git面试实践/02_Git进阶与实战.md
+    - 学习进度跟踪: docs/Git面试实践/Git学习进度跟踪.md
+
+  - 附录:
+    - Agent 相关面试题汇总: docs/agent相关面试题.md
+    - 面试问答准备: docs/面试问答准备.txt
