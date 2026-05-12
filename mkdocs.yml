@@ -6,12 +6,12 @@
 
 site_name: AI 面试冲刺手册
 site_description: Python、AI Agent、Git 面试学习材料
-site_author: YB200
-copyright: Copyright &copy; 2026 YB200
+site_author: AI Interview Study Notes
+copyright: Copyright &copy; 2026 AI Interview Study Notes
 
 docs_dir: docs
 
-site_url: https://yiang-puak.github.io/study/
+site_url: https://example.github.io/study/
 
 theme:
   name: material
@@ -73,11 +73,6 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/YB200
 
 nav:
   - 首页: index.md
