@@ -20,16 +20,16 @@ theme:
     # 浅色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: blue grey
+      accent: blue grey
       toggle:
         icon: material/brightness-7
         name: 切换到深色模式
     # 深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: blue grey
+      accent: blue grey
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
@@ -70,6 +70,9 @@ markdown_extensions:
       permalink: true
   - attr_list
   - md_in_html
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   social:
