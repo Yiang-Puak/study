@@ -129,6 +129,10 @@ nav:
       - Explore-Plan-Act 决策框架: AI Agent面试实践/10_Agent规划与Skill/01_Explore_Plan_Act决策框架.md
       - Agent Skill 定制行为指南: AI Agent面试实践/10_Agent规划与Skill/02_AgentSkill定制行为指南.md
 
+  - Vibe Coding 流程:
+    - 总览: VibeCoding流程/index.md
+    - Vibe Coding 完成项目标准流程: VibeCoding流程/01_VibeCoding完成项目标准流程.md
+
   - Python 面试实践:
     - 学习进度跟踪: Python面试实践/Python学习进度跟踪.md
     - 00 零基础入门:
