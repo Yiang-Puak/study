@@ -44,14 +44,7 @@ jobs:
       - name: Build site
         run: mkdocs build --config-file mkdocs.yml
 
-      # 5. 复制莫兰迪前端页到 site/
-      - name: Copy morandi-page
-        run: |
-          cp -r morandi-page site/morandi-page
-          mkdir -p site/content-md
-          cp -r docs/* site/content-md/
-
-      # 6. 部署到 gh-pages 分支
+      # 5. 部署到 gh-pages 分支
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
