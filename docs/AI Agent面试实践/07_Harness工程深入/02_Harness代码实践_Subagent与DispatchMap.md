@@ -2,7 +2,7 @@
 
 > 来源: AI Agent面试实践/07_Harness工程深入/02_Harness代码实践_Subagent与DispatchMap.py
 
-`python
+```python
 """
 【面试加分项】Harness 工程核心模式 —— Subagent 隔离 + Dispatch Map
 
@@ -355,5 +355,4 @@ A: 提示词工程师优化输入文本让模型输出更好；Harness 工程师
    前者是"教模型说话"，后者是"给模型手脚和眼睛"。
 """
 
-`
-`
+```

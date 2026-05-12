@@ -83,9 +83,16 @@ nav:
   - 首页: index.md
 
   - AI Agent 面试实践:
+    - 总览: AI Agent面试实践/index.md
     - 学习进度跟踪: AI Agent面试实践/学习进度跟踪.md
     - 遗漏检查报告: AI Agent面试实践/遗漏检查报告.md
+    - 00 AI 底层框架全景图:
+      - 总览: AI Agent面试实践/00_AI底层框架全景图/index.md
+      - AI 系统分层总览: AI Agent面试实践/00_AI底层框架全景图/01_AI系统分层总览.md
+      - LLM 与 Token 底层原理: AI Agent面试实践/00_AI底层框架全景图/02_LLM与Token底层原理.md
+      - Context Window 记忆加工容器: AI Agent面试实践/00_AI底层框架全景图/03_ContextWindow记忆加工容器.md
     - 01 Agent 基础架构:
+      - 核心概念初学者版: AI Agent面试实践/01_Agent基础架构/00_核心概念初学者版.md
       - 核心概念与面试答题模板: AI Agent面试实践/01_Agent基础架构/01_核心概念与面试答题模板.md
       - ReAct Agent 代码实践: AI Agent面试实践/01_Agent基础架构/02_ReAct_Agent_代码实践.md
       - MultiAgent 协作实践: AI Agent面试实践/01_Agent基础架构/03_MultiAgent_协作实践.md
@@ -113,6 +120,14 @@ nav:
       - 动态上下文检索实践: AI Agent面试实践/08_Context工程/04_动态上下文检索实践.md
     - 09 模拟面试题与答案:
       - 综合模拟面试题库: AI Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md
+    - 10 Tool 与 MCP 工程实践:
+      - 总览: AI Agent面试实践/09_Tool与MCP工程实践/index.md
+      - Tool 设计原则与容错: AI Agent面试实践/09_Tool与MCP工程实践/01_Tool设计原则与容错.md
+      - MCP 协议核心概念: AI Agent面试实践/09_Tool与MCP工程实践/02_MCP协议核心概念.md
+    - 11 Agent 规划与 Skill:
+      - 总览: AI Agent面试实践/10_Agent规划与Skill/index.md
+      - Explore-Plan-Act 决策框架: AI Agent面试实践/10_Agent规划与Skill/01_Explore_Plan_Act决策框架.md
+      - Agent Skill 定制行为指南: AI Agent面试实践/10_Agent规划与Skill/02_AgentSkill定制行为指南.md
 
   - Python 面试实践:
     - 学习进度跟踪: Python面试实践/Python学习进度跟踪.md
@@ -126,10 +141,8 @@ nav:
       - 06 函数基础: Python面试实践/00_零基础入门/06_函数基础.md
     - 01 Python 语言特性:
       - 核心概念与面试答题模板: Python面试实践/01_Python语言特性/01_核心概念与面试答题模板.md
-      - 高级特性代码实践: Python面试实践/01_Python语言特性/02_高级特性代码实践.md
     - 02 数据结构与常用库:
       - 内置数据结构从入门到面试: Python面试实践/02_数据结构与常用库/01_内置数据结构从入门到面试.md
-      - 常用标准库详解: Python面试实践/02_数据结构与常用库/02_常用标准库详解.md
     - 03 面试高频手撕题:
       - 01 最长不重复子串: Python面试实践/03_面试高频手撕题/01_最长不重复子串.md
       - 02 快速排序: Python面试实践/03_面试高频手撕题/02_快速排序.md
@@ -138,8 +151,6 @@ nav:
       - 05 TopK 问题: Python面试实践/03_面试高频手撕题/05_TopK问题.md
       - 06 二分查找: Python面试实践/03_面试高频手撕题/06_二分查找.md
       - 07 动态规划_爬楼梯: Python面试实践/03_面试高频手撕题/07_动态规划_爬楼梯.md
-    - 04 Python 进阶面试题:
-      - 进阶面试真题与深度解析: Python面试实践/04_Python进阶面试题/01_进阶面试真题与深度解析.md
 
   - Git 面试实践:
     - 01 核心概念与面试答题模板: Git面试实践/01_核心概念与面试答题模板.md
@@ -147,5 +158,6 @@ nav:
     - 学习进度跟踪: Git面试实践/Git学习进度跟踪.md
 
   - 附录:
+    - 面试冲刺手册全文: 面试冲刺手册.md
     - Agent 相关面试题汇总: agent相关面试题.md
     - 面试问答准备: 面试问答准备.txt

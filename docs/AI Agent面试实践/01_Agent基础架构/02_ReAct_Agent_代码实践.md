@@ -2,7 +2,7 @@
 
 > 来源: AI Agent面试实践/01_Agent基础架构/02_ReAct_Agent_代码实践.py
 
-`python
+```python
 """
 【面试必会】手写 ReAct Agent 框架 —— 从零实现一个极简 Agent
 
@@ -276,5 +276,4 @@ Q: 怎么支持一次调用多个工具？
 A: 遍历 message.tool_calls 列表，并行执行多个工具，然后把每个结果都加入历史。
 """
 
-`
-`
+```

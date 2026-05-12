@@ -2,7 +2,7 @@
 
 > 来源: Python面试实践/03_面试高频手撕题/03_LRU缓存.py
 
-`python
+```python
 """
 【面试高频】LRU 缓存 —— 哈希表 + 双向链表
 
@@ -192,5 +192,4 @@ A: Redis 的 LRU 淘汰策略（maxmemory-policy allkeys-lru），
    或者自己用 sorted set（score = 最后访问时间戳）实现。
 """
 
-`
-`
+```

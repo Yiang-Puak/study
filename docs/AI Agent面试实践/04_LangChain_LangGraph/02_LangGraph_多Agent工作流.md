@@ -2,7 +2,7 @@
 
 > 来源: AI Agent面试实践/04_LangChain_LangGraph/02_LangGraph_多Agent工作流.py
 
-`python
+```python
 """
 【面试加分项】LangGraph 多 Agent 工作流编排 —— 代码实践
 
@@ -296,5 +296,4 @@ A: 每个 thread_id 有独立的 State 副本，互不影响；
    多线程共享数据需要通过外部存储（Redis/数据库）。
 """
 
-`
-`
+```

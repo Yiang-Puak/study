@@ -6,35 +6,72 @@
 
 ---
 
-## 目录
+## 快速开始
 
-- [一、AI Agent 方向（必考核心）](#一ai-agent-方向必考核心)
-  - [1.1 Agent 基础架构](#11-agent-基础架构)
-  - [1.2 记忆系统](#12-记忆系统)
-  - [1.3 RAG 检索增强生成](#13-rag-检索增强生成)
-  - [1.4 LangChain / LangGraph 开发框架](#14-langchain--langgraph-开发框架)
-  - [1.5 Prompt Engineering 与 AI 编程工具](#15-prompt-engineering-与-ai-编程工具)
-  - [1.6 模型微调与性能优化](#16-模型微调与性能优化)
-  - [1.7 AI Agent 方向学习资源推荐](#17-ai-agent-方向学习资源推荐)
-- [二、Python 方向](#二python-方向)
-  - [2.1 语言特性](#21-语言特性)
-  - [2.2 数据结构与常用库](#22-数据结构与常用库)
-  - [2.3 面试高频手撕题](#23-面试高频手撕题)
-  - [2.4 Python 方向学习资源推荐](#24-python-方向学习资源推荐)
-- [三、后端方向（通用八股）](#三后端方向通用八股)
-  - [3.1 计算机网络](#31-计算机网络)
-  - [3.2 操作系统](#32-操作系统)
-  - [3.3 数据库 MySQL](#33-数据库-mysql)
-  - [3.4 Redis](#34-redis)
-  - [3.5 消息队列 MQ](#35-消息队列-mq)
-  - [3.6 系统设计](#36-系统设计)
-  - [3.7 后端方向学习资源推荐](#37-后端方向学习资源推荐)
-- [四、计算机基础（通用必考）](#四计算机基础通用必考)
-  - [4.1 数据结构](#41-数据结构)
-  - [4.2 算法](#42-算法)
-  - [4.3 计算机基础学习资源推荐](#43-计算机基础学习资源推荐)
-- [五、14 天冲刺计划](#五14-天冲刺计划)
-- [附录：面试答题五步结构](#附录面试答题五步结构)
+<div class="study-grid" markdown>
+
+<div class="study-card" markdown>
+
+### AI Agent 系统学习
+
+从 LLM & Token、Context Window、RAG、Tool/MCP 到 Agent Skill，建立完整面试知识图谱。
+
+[进入 AI Agent 总览](AI%20Agent面试实践/index.md){ .md-button }
+
+</div>
+
+<div class="study-card" markdown>
+
+### 底层框架全景图
+
+用一张图讲清 Structural、Container、Bridge、Orchestration、Customization 五层架构。
+
+[查看全景图](AI%20Agent面试实践/00_AI底层框架全景图/index.md){ .md-button }
+
+</div>
+
+<div class="study-card" markdown>
+
+### Python 面试实践
+
+从零基础语法到数据结构、高频手撕题和进阶面试题，适合补齐编码能力。
+
+[学习 Python](Python面试实践/Python学习进度跟踪.md){ .md-button }
+
+</div>
+
+<div class="study-card" markdown>
+
+### 模拟面试题库
+
+按五步结构法练习回答：核心定义、边界区分、底层原理、常见坑点、生产优化。
+
+[开始模拟面试](AI%20Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md){ .md-button }
+
+</div>
+
+</div>
+
+---
+
+## AI Agent 知识主线
+
+```mermaid
+graph LR
+    A[LLM & Token] --> B[Context Window]
+    B --> C[Prompt / RAG / Memory]
+    C --> D[Tool / Function Call]
+    D --> E[MCP]
+    E --> F[Agent: Explore / Plan / Act]
+    F --> G[Agent Skill]
+    F --> H[Eval / Safety / Trace]
+```
+
+---
+
+## 内容概览
+
+本页面保留完整冲刺手册正文，右侧目录会自动生成章节导航。
 
 ---
 

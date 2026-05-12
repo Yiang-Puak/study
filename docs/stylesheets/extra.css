@@ -190,17 +190,83 @@
     margin: 1.2rem 0;
 }
 
+.md-typeset .highlight,
+.md-typeset .highlighttable,
+.md-typeset .highlight pre,
+.md-typeset .highlight code,
 .md-typeset pre code {
     background: transparent !important;
-    color: #E8E4DE;
+    color: #F4EFE7 !important;
     border: none;
     padding: 0;
     font-size: 0.82rem;
     line-height: 1.7;
 }
 
+.md-typeset .highlight {
+    background: #302E2B !important;
+    border: 1px solid #57514B;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.md-typeset .highlight pre {
+    background: #302E2B !important;
+    color: #F4EFE7 !important;
+    margin: 0;
+}
+
+.md-typeset .highlight code,
+.md-typeset .highlight span,
+.md-typeset pre code,
+.md-typeset pre code span {
+    color: #F4EFE7 !important;
+    text-shadow: none !important;
+}
+
+.md-typeset .highlight .k,
+.md-typeset .highlight .kd,
+.md-typeset .highlight .kn,
+.md-typeset .highlight .ow {
+    color: #D9B8A9 !important;
+}
+
+.md-typeset .highlight .s,
+.md-typeset .highlight .s1,
+.md-typeset .highlight .s2,
+.md-typeset .highlight .sb {
+    color: #BFD0A8 !important;
+}
+
+.md-typeset .highlight .c,
+.md-typeset .highlight .c1,
+.md-typeset .highlight .cm {
+    color: #B7AEA5 !important;
+}
+
+.md-typeset .highlight .n,
+.md-typeset .highlight .na,
+.md-typeset .highlight .nb,
+.md-typeset .highlight .nc,
+.md-typeset .highlight .nf {
+    color: #EDE6DC !important;
+}
+
+.md-typeset .highlight .mi,
+.md-typeset .highlight .mf,
+.md-typeset .highlight .kc {
+    color: #D6C29F !important;
+}
+
 .md-clipboard {
-    color: #9C9A98;
+    color: #F4EFE7 !important;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+}
+
+.md-clipboard:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #FFFFFF !important;
 }
 
 /* ---------- 引用 ---------- */
@@ -409,6 +475,35 @@
     padding: 2rem;
 }
 
+/* ---------- 学习首页卡片 ---------- */
+.study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.study-card {
+    background: var(--md-morandi-surface);
+    border: 1px solid var(--md-morandi-border);
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: 0 6px 18px rgba(45, 43, 41, 0.05);
+}
+
+.study-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+.study-card p {
+    margin-bottom: 0.9rem;
+}
+
+.study-card .md-button {
+    border-radius: 999px;
+}
+
 /* ---------- 页脚 ---------- */
 .md-footer {
     background: var(--md-morandi-surface);
@@ -465,6 +560,9 @@
 @media (max-width: 768px) {
     .md-content {
         padding: 1rem;
+    }
+    .study-grid {
+        grid-template-columns: 1fr;
     }
     .md-typeset {
         font-size: 0.92rem;

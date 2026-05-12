@@ -2,7 +2,7 @@
 
 > 来源: AI Agent面试实践/03_RAG检索增强/02_RAG完整链路_代码实践.py
 
-`python
+```python
 """
 【面试加分项】基于 LangChain 构建完整 RAG 链路 —— 代码实践
 
@@ -215,5 +215,4 @@ A: 1）Embedding 微调；2）查询改写（Query Expansion）；
    3）混合检索补充 BM25；4）加入兜底策略（纯 LLM 回答 + 免责声明）。
 """
 
-`
-`
+```
