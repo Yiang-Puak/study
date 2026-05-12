@@ -36,7 +36,7 @@
 
 从零基础语法到数据结构、高频手撕题和进阶面试题，适合补齐编码能力。
 
-[学习 Python](Python面试实践/Python学习进度跟踪.md){ .md-button }
+[学习 Python](Python面试实践/00_零基础入门/01_变量与数据类型.md){ .md-button }
 
 </div>
 

@@ -84,8 +84,6 @@ nav:
 
   - AI Agent 面试实践:
     - 总览: AI Agent面试实践/index.md
-    - 学习进度跟踪: AI Agent面试实践/学习进度跟踪.md
-    - 遗漏检查报告: AI Agent面试实践/遗漏检查报告.md
     - 00 AI 底层框架全景图:
       - 总览: AI Agent面试实践/00_AI底层框架全景图/index.md
       - AI 系统分层总览: AI Agent面试实践/00_AI底层框架全景图/01_AI系统分层总览.md
@@ -120,6 +118,7 @@ nav:
       - 动态上下文检索实践: AI Agent面试实践/08_Context工程/04_动态上下文检索实践.md
     - 09 模拟面试题与答案:
       - 综合模拟面试题库: AI Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md
+      - AI Agent 方向面试题合集: AI Agent面试实践/08_模拟面试题与答案/02_AIAgent方向面试题合集.md
     - 10 Tool 与 MCP 工程实践:
       - 总览: AI Agent面试实践/09_Tool与MCP工程实践/index.md
       - Tool 设计原则与容错: AI Agent面试实践/09_Tool与MCP工程实践/01_Tool设计原则与容错.md
@@ -133,10 +132,12 @@ nav:
     - 总览: VibeCoding流程/index.md
     - Vibe Coding 完成项目标准流程: VibeCoding流程/01_VibeCoding完成项目标准流程.md
 
+  - 综合面试冲刺:
+    - 总览: 综合面试冲刺/index.md
+    - 综合面试冲刺手册: 综合面试冲刺/01_综合面试冲刺手册.md
+
   - Python 面试实践:
-    - 学习进度跟踪: Python面试实践/Python学习进度跟踪.md
     - 00 零基础入门:
-      - 学习进度: Python面试实践/00_零基础入门/00_零基础学习进度.md
       - 01 变量与数据类型: Python面试实践/00_零基础入门/01_变量与数据类型.md
       - 02 输入输出与运算符: Python面试实践/00_零基础入门/02_输入输出与运算符.md
       - 03 条件判断: Python面试实践/00_零基础入门/03_条件判断.md
@@ -159,9 +160,3 @@ nav:
   - Git 面试实践:
     - 01 核心概念与面试答题模板: Git面试实践/01_核心概念与面试答题模板.md
     - 02 Git 进阶与实战: Git面试实践/02_Git进阶与实战.md
-    - 学习进度跟踪: Git面试实践/Git学习进度跟踪.md
-
-  - 附录:
-    - 面试冲刺手册全文: 面试冲刺手册.md
-    - Agent 相关面试题汇总: agent相关面试题.md
-    - 面试问答准备: 面试问答准备.txt

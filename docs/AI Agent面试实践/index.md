@@ -101,9 +101,8 @@ graph TD
 
 ---
 
-## 五、建议冲刺顺序
+## 五、面试模拟题入口
 
-1. **第一轮：先理解概念**：AI 系统分层总览 → LLM 与 Token → Context Window → Agent 初学者版
-2. **第二轮：掌握高频基础**：Agentic Loop → ReAct → Function Call → Memory → RAG
-3. **第三轮：理解工程化**：Tool/MCP → LangGraph → Explore-Plan-Act → Agent Skill
-4. **第四轮：准备面试表达**：面试模板 → 高频追问 → 模拟面试题库
+如果已经理解上面的知识模块，可以直接进入模拟面试题库，用“定义 → 区分 → 原理 → 坑点 → 优化”的结构练习口述答案。
+
+[进入 AI Agent 综合模拟面试题库](08_模拟面试题与答案/01_综合模拟面试题库.md){ .md-button }
