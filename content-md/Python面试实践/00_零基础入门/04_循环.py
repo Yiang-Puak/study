@@ -1,0 +1,244 @@
+# ============================================================
+# Python 零基础入门 —— 第4课：循环
+# ============================================================
+
+
+# ============================================================
+# 1. for 循环 —— 遍历
+# ============================================================
+
+print("=" * 50)
+print("第一部分：for 循环")
+print("=" * 50)
+
+# for 循环用于"遍历"一个序列中的每个元素
+# 类比：把书架上的书一本本拿下来看
+
+print("\n--- 遍历列表 ---")
+fruits = ["苹果", "香蕉", "橙子"]
+for fruit in fruits:
+    print(f"我在吃 {fruit}")
+
+print("\n--- 遍历字符串 ---")
+for char in "Hello":
+    print(char, end=" ")
+print()
+
+print("\n--- 遍历数字范围 range() ---")
+# range(n) 生成 0, 1, 2, ..., n-1
+for i in range(5):
+    print(f"第 {i} 次")
+
+print("\n--- range 的三种用法 ---")
+# range(stop)         -> 0 到 stop-1
+# range(start, stop)  -> start 到 stop-1
+# range(start, stop, step) -> start 到 stop-1，每次跳 step
+
+print("range(5):       ", list(range(5)))         # [0, 1, 2, 3, 4]
+print("range(2, 5):  ", list(range(2, 5)))       # [2, 3, 4]
+print("range(0, 10, 2):", list(range(0, 10, 2))) # [0, 2, 4, 6, 8]
+print("range(5, 0, -1):", list(range(5, 0, -1))) # [5, 4, 3, 2, 1]
+
+print("\n--- 遍历字典 ---")
+student = {"姓名": "张三", "年龄": 20, "分数": 85}
+
+# 遍历 key
+print("遍历 key:")
+for key in student:
+    print(f"  {key}")
+
+# 遍历 value
+print("遍历 value:")
+for value in student.values():
+    print(f"  {value}")
+
+# 遍历 key 和 value
+print("遍历 key 和 value:")
+for key, value in student.items():
+    print(f"  {key} = {value}")
+
+
+# ============================================================
+# 2. while 循环 —— 条件循环
+# ============================================================
+
+print("\n" + "=" * 50)
+print("第二部分：while 循环")
+print("=" * 50)
+
+# while 在条件为 True 时一直循环
+# 类比："只要灯还亮着，就继续看书"
+
+print("\n--- 基本 while ---")
+count = 0
+while count < 5:
+    print(f"count = {count}")
+    count += 1  # 别忘了让 count 变化，否则会死循环！
+
+print("\n--- while True + break ---")
+# 有时需要先执行再判断，用 while True + break
+attempts = 0
+while True:
+    attempts += 1
+    print(f"第 {attempts} 次尝试")
+    if attempts >= 3:
+        print("够了，退出")
+        break  # 跳出循环
+
+
+# ============================================================
+# 3. break 和 continue
+# ============================================================
+
+print("\n" + "=" * 50)
+print("第三部分：break 和 continue")
+print("=" * 50)
+
+# break：立刻跳出整个循环
+# continue：跳过当前轮，继续下一轮
+
+print("\n--- break 示例 ---")
+for i in range(10):
+    if i == 5:
+        print("遇到 5，跳出循环")
+        break
+    print(f"  {i}")
+
+print("\n--- continue 示例 ---")
+for i in range(10):
+    if i % 2 == 0:  # 偶数
+        continue    # 跳过偶数，不执行下面的 print
+    print(f"  奇数: {i}")
+
+
+# ============================================================
+# 4. 嵌套循环
+# ============================================================
+
+print("\n" + "=" * 50)
+print("第四部分：嵌套循环")
+print("=" * 50)
+
+# 循环里面再写循环
+
+print("\n--- 打印乘法表 ---")
+for i in range(1, 4):          # 外层：1, 2, 3
+    for j in range(1, 4):      # 内层：每个 i，j 都从 1 到 3
+        print(f"{i}x{j}={i*j}", end="\t")
+    print()  # 内层循环结束，换行
+
+print("\n--- 用嵌套循环找配对 ---")
+team_a = ["小明", "小红"]
+team_b = ["张三", "李四"]
+for a in team_a:
+    for b in team_b:
+        print(f"  {a} vs {b}")
+
+
+# ============================================================
+# 5. else 子句（面试考点！）
+# ============================================================
+
+print("\n" + "=" * 50)
+print("第五部分：循环的 else 子句")
+print("=" * 50)
+
+# 循环也可以有 else！
+# for/while 后面可以接 else
+# 如果循环是"正常结束"（没有被 break），else 会执行
+
+print("\n--- 正常结束（执行 else）---")
+for i in range(3):
+    print(f"  循环中: {i}")
+else:
+    print("循环正常结束，执行 else")
+
+print("\n--- 被 break（不执行 else）---")
+for i in range(3):
+    print(f"  循环中: {i}")
+    if i == 1:
+        print("  break!")
+        break
+else:
+    print("这行不会执行，因为被 break 了")
+
+print("""
+【面试考点】循环 + else 的应用：查找元素
+  for item in items:
+      if item == target:
+          print("找到了")
+          break
+  else:
+      print("没找到")  # 循环完整走完，说明没找到
+""")
+
+
+# ============================================================
+# 6. enumerate 和 zip（实用技巧）
+# ============================================================
+
+print("\n" + "=" * 50)
+print("第六部分：enumerate 和 zip")
+print("=" * 50)
+
+print("\n--- enumerate：同时获取索引和值 ---")
+fruits = ["苹果", "香蕉", "橙子"]
+
+# 不用 enumerate（麻烦）
+for i in range(len(fruits)):
+    print(f"  {i}: {fruits[i]}")
+
+# 用 enumerate（简洁）
+print("用 enumerate:")
+for i, fruit in enumerate(fruits):
+    print(f"  {i}: {fruit}")
+
+# 指定起始索引
+for i, fruit in enumerate(fruits, start=1):
+    print(f"  编号 {i}: {fruit}")
+
+print("\n--- zip：同时遍历多个列表 ---")
+names = ["张三", "李四", "王五"]
+scores = [85, 92, 78]
+
+for name, score in zip(names, scores):
+    print(f"  {name}: {score}分")
+
+# 如果长度不同，zip 以最短的为准
+ages = [20, 22]
+for name, score, age in zip(names, scores, ages):
+    print(f"  {name}: {score}分, {age}岁")
+
+
+# ============================================================
+# 7. 练习题
+# ============================================================
+
+print("\n" + "=" * 50)
+print("练习题")
+print("=" * 50)
+
+print("""
+练习1：求 1 到 100 的和
+  用 for 循环和 while 循环各写一遍
+
+练习2：打印九九乘法表
+  1x1=1 1x2=2 ...
+  2x1=2 2x2=4 ...
+  ...
+
+练习3：判断素数
+  num = 17
+  判断一个数是否是素数（只能被 1 和自身整除）
+  提示：用 range(2, num) 逐个试除
+
+练习4：找列表中的最大值
+  nums = [3, 7, 2, 9, 1]
+  不用 max() 函数，自己写循环找
+
+练习5：反转字符串
+  s = "Hello"
+  用循环把字符串倒过来
+""")
+
+print("\n本节完毕！建议：把每个循环例子修改条件，观察输出变化")

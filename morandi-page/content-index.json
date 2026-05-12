@@ -1,0 +1,174 @@
+[
+  {
+    "path": "agent相关面试题.md",
+    "title": "AI Agent 方向面试题合集"
+  },
+  {
+    "path": "面试冲刺手册.md",
+    "title": "2026 AI 软件开发实习生 面试冲刺手册"
+  },
+  {
+    "path": "AI Agent面试实践/学习进度跟踪.md",
+    "title": "AI Agent 面试冲刺 —— 学习进度跟踪"
+  },
+  {
+    "path": "AI Agent面试实践/遗漏检查报告.md",
+    "title": "AI Agent + Python 面试学习材料 —— 遗漏检查报告"
+  },
+  {
+    "path": "AI Agent面试实践/01_Agent基础架构/01_核心概念与面试答题模板.md",
+    "title": "01 | Agent 基础架构 —— 核心概念与面试答题模板"
+  },
+  {
+    "path": "AI Agent面试实践/01_Agent基础架构/02_ReAct_Agent_代码实践.md",
+    "title": "02_ReAct_Agent_代码实践"
+  },
+  {
+    "path": "AI Agent面试实践/01_Agent基础架构/03_MultiAgent_协作实践.md",
+    "title": "03_MultiAgent_协作实践"
+  },
+  {
+    "path": "AI Agent面试实践/01_Agent基础架构/04_进阶面试真题与深度解析.md",
+    "title": "04 | Agent 基础架构 —— 进阶面试真题与深度解析"
+  },
+  {
+    "path": "AI Agent面试实践/02_记忆系统/01_核心概念与面试答题模板.md",
+    "title": "02 | 记忆系统 —— 核心概念与面试答题模板"
+  },
+  {
+    "path": "AI Agent面试实践/02_记忆系统/02_记忆系统_代码实践.md",
+    "title": "02_记忆系统_代码实践"
+  },
+  {
+    "path": "AI Agent面试实践/03_RAG检索增强/01_核心概念与面试答题模板.md",
+    "title": "03 | RAG 检索增强生成 —— 核心概念与面试答题模板"
+  },
+  {
+    "path": "AI Agent面试实践/03_RAG检索增强/02_RAG完整链路_代码实践.md",
+    "title": "02_RAG完整链路_代码实践"
+  },
+  {
+    "path": "AI Agent面试实践/04_LangChain_LangGraph/01_核心概念与面试答题模板.md",
+    "title": "04 | LangChain / LangGraph 开发框架 —— 核心概念与面试答题模板"
+  },
+  {
+    "path": "AI Agent面试实践/04_LangChain_LangGraph/02_LangGraph_多Agent工作流.md",
+    "title": "02_LangGraph_多Agent工作流"
+  },
+  {
+    "path": "AI Agent面试实践/05_模型微调与性能优化/01_核心概念与面试答题模板.md",
+    "title": "06 | 模型微调与性能优化"
+  },
+  {
+    "path": "AI Agent面试实践/06_Prompt工程与AI编程工具/01_核心概念与面试答题模板.md",
+    "title": "07 | Prompt Engineering 与 AI 编程工具"
+  },
+  {
+    "path": "AI Agent面试实践/07_Harness工程深入/01_Harness核心理念与面试考点.md",
+    "title": "08 | Harness 工程深入 —— 从 learn-claude-code 提炼的面试知识点"
+  },
+  {
+    "path": "AI Agent面试实践/07_Harness工程深入/02_Harness代码实践_Subagent与DispatchMap.md",
+    "title": "02_Harness代码实践_Subagent与DispatchMap"
+  },
+  {
+    "path": "AI Agent面试实践/08_Context工程/01_Context工程核心概念与面试考点.md",
+    "title": "Context 工程核心概念与面试考点"
+  },
+  {
+    "path": "AI Agent面试实践/08_Context工程/02_Context压缩与总结实践.md",
+    "title": "Context 压缩与总结实践（Compaction）"
+  },
+  {
+    "path": "AI Agent面试实践/08_Context工程/03_结构化笔记与持久化记忆.md",
+    "title": "结构化笔记与持久化记忆（Structured Note-taking）"
+  },
+  {
+    "path": "AI Agent面试实践/08_Context工程/04_动态上下文检索实践.md",
+    "title": "动态上下文检索实践（Context Retrieval）"
+  },
+  {
+    "path": "AI Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md",
+    "title": "05 | 综合模拟面试题库 —— AI Agent 方向"
+  },
+  {
+    "path": "Git面试实践/01_核心概念与面试答题模板.md",
+    "title": "Git 面试冲刺 —— 核心概念与面试答题模板"
+  },
+  {
+    "path": "Git面试实践/02_Git进阶与实战.md",
+    "title": "Git 面试冲刺 —— 进阶概念与实战场景"
+  },
+  {
+    "path": "Git面试实践/Git学习进度跟踪.md",
+    "title": "Git 面试冲刺 —— 学习进度跟踪"
+  },
+  {
+    "path": "Python面试实践/Python学习进度跟踪.md",
+    "title": "Python 面试冲刺 —— 学习进度跟踪"
+  },
+  {
+    "path": "Python面试实践/00_零基础入门/00_零基础学习进度.md",
+    "title": "Python 零基础入门 —— 学习进度跟踪"
+  },
+  {
+    "path": "Python面试实践/00_零基础入门/01_变量与数据类型.md",
+    "title": "01_变量与数据类型"
+  },
+  {
+    "path": "Python面试实践/00_零基础入门/02_输入输出与运算符.md",
+    "title": "02_输入输出与运算符"
+  },
+  {
+    "path": "Python面试实践/00_零基础入门/03_条件判断.md",
+    "title": "03_条件判断"
+  },
+  {
+    "path": "Python面试实践/00_零基础入门/04_循环.md",
+    "title": "04_循环"
+  },
+  {
+    "path": "Python面试实践/00_零基础入门/05_字符串操作详解.md",
+    "title": "05_字符串操作详解"
+  },
+  {
+    "path": "Python面试实践/00_零基础入门/06_函数基础.md",
+    "title": "06_函数基础"
+  },
+  {
+    "path": "Python面试实践/01_Python语言特性/01_核心概念与面试答题模板.md",
+    "title": "01 | Python 语言特性 —— 核心概念与面试答题模板"
+  },
+  {
+    "path": "Python面试实践/02_数据结构与常用库/01_内置数据结构从入门到面试.md",
+    "title": "01_内置数据结构从入门到面试"
+  },
+  {
+    "path": "Python面试实践/03_面试高频手撕题/01_最长不重复子串.md",
+    "title": "01_最长不重复子串"
+  },
+  {
+    "path": "Python面试实践/03_面试高频手撕题/02_快速排序.md",
+    "title": "02_快速排序"
+  },
+  {
+    "path": "Python面试实践/03_面试高频手撕题/03_LRU缓存.md",
+    "title": "03_LRU缓存"
+  },
+  {
+    "path": "Python面试实践/03_面试高频手撕题/04_判断BST合法性.md",
+    "title": "04_判断BST合法性"
+  },
+  {
+    "path": "Python面试实践/03_面试高频手撕题/05_TopK问题.md",
+    "title": "05_TopK问题"
+  },
+  {
+    "path": "Python面试实践/03_面试高频手撕题/06_二分查找.md",
+    "title": "06_二分查找"
+  },
+  {
+    "path": "Python面试实践/03_面试高频手撕题/07_动态规划_爬楼梯.md",
+    "title": "07_动态规划_爬楼梯"
+  }
+]
