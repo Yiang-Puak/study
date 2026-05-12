@@ -6,7 +6,7 @@
 ## 在线访问
 
 ```text
-https://<your-github-username>.github.io/study/
+https://Yiang-Puak.github.io/study/
 ```
 
 站点支持：
@@ -120,7 +120,7 @@ python -m mkdocs build --strict -f "<project-root>\mkdocs.yml"
 推送到 `main` 分支后，会自动构建并发布到：
 
 ```text
-https://<your-github-username>.github.io/study/
+https://Yiang-Puak.github.io/study/
 ```
 
 常用提交命令：

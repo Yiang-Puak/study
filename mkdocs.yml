@@ -11,7 +11,7 @@ copyright: Copyright &copy; 2026 AI Interview Study Notes
 
 docs_dir: docs
 
-site_url: https://example.github.io/study/
+site_url: https://Yiang-Puak.github.io/study/
 
 theme:
   name: material
@@ -73,6 +73,11 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Yiang-Puak
 
 nav:
   - 首页: index.md
