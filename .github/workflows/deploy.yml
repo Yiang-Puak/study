@@ -40,9 +40,13 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-minify-plugin
 
-      # 4. 构建并部署到 GitHub Pages
-      # mkdocs.yml 在仓库根目录（面试学习文件夹/ 作为仓库根）
-      - name: Build and Deploy
-        run: mkdocs gh-deploy --force --config-file mkdocs.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 4. 构建站点到 site/ 目录
+      - name: Build site
+        run: mkdocs build --config-file mkdocs.yml
+
+      # 5. 部署到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
