@@ -80,7 +80,7 @@ extra:
       link: https://github.com/YB200
 
 nav:
-  - 首页: 面试冲刺手册.md
+  - 首页: index.md
 
   - AI Agent 面试实践:
     - 学习进度跟踪: AI Agent面试实践/学习进度跟踪.md
