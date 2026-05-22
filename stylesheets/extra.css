@@ -1,91 +1,88 @@
 /* =====================================================
-   MkDocs Material 自定义样式 —— 莫兰迪阅读主题
-   核心目标：深色文字 + 低饱和度背景，久看不累
+   MkDocs Material 自定义样式 —— 技术阅读主题
+   核心目标：清爽层级、稳定对比、长文档耐读
    ===================================================== */
 
 /* ---------- Material 原生变量覆盖（浅色模式） ---------- */
 :root {
-    /* 背景色：温暖的米白 */
-    --md-default-bg-color: #FAF8F5;
-    --md-default-bg-color--light: #F5F3F0;
-    --md-default-bg-color--lighter: #EDE9E4;
+    --md-default-bg-color: #F3F6F8;
+    --md-default-bg-color--light: #FFFFFF;
+    --md-default-bg-color--lighter: #E2E8EE;
 
-    /* 文字色：深灰近黑，确保高对比度 */
-    --md-default-fg-color: #2D2B29;
-    --md-default-fg-color--light: #4A4846;
-    --md-default-fg-color--lighter: #7A7876;
-    --md-default-fg-color--lightest: #9C9A98;
+    --md-default-fg-color: #17212A;
+    --md-default-fg-color--light: #34424E;
+    --md-default-fg-color--lighter: #637281;
+    --md-default-fg-color--lightest: #97A4AF;
 
-    /* 主色：莫兰迪蓝灰 */
-    --md-primary-fg-color: #FAF8F5;
-    --md-primary-fg-color--light: #F5F3F0;
-    --md-primary-fg-color--dark: #E8E4DE;
-    --md-primary-bg-color: #6E828C;
-    --md-primary-bg-color--light: #8FA3AD;
-    --md-primary-bg-color--dark: #5A6E78;
+    --md-primary-fg-color: #EDF3F6;
+    --md-primary-fg-color--light: #EDF3F6;
+    --md-primary-fg-color--dark: #C8D7DF;
+    --md-primary-bg-color: #18232C;
+    --md-primary-bg-color--light: #24323C;
+    --md-primary-bg-color--dark: #111A21;
 
-    /* 强调色：莫兰迪蓝 */
-    --md-accent-fg-color: #FAF8F5;
-    --md-accent-bg-color: #8FA3AD;
+    --md-accent-fg-color: #F4F8FA;
+    --md-accent-bg-color: #44697A;
 
     /* 代码高亮 */
-    --md-code-fg-color: #E8E4DE;
-    --md-code-bg-color: #3D3B39;
-    --md-code-hl-color: rgba(143, 163, 173, 0.25);
+    --md-code-fg-color: #E7EEF3;
+    --md-code-bg-color: #26333D;
+    --md-code-hl-color: rgba(119, 158, 177, 0.24);
 
-    /* 自定义莫兰迪变量 */
-    --md-morandi-bg: #FAF8F5;
-    --md-morandi-surface: #F5F3F0;
-    --md-morandi-border: #E0DCD7;
-    --md-morandi-text: #2D2B29;
-    --md-morandi-text-secondary: #4A4846;
-    --md-morandi-text-tertiary: #7A7876;
+    --md-morandi-bg: #F3F6F8;
+    --md-morandi-surface: #FFFFFF;
+    --md-morandi-border: #D4DEE6;
+    --md-morandi-text: #17212A;
+    --md-morandi-text-secondary: #34424E;
+    --md-morandi-text-tertiary: #637281;
 
-    --md-morandi-blue: #7A8E98;
-    --md-morandi-blue-light: #A0B0B8;
-    --md-morandi-blue-bg: rgba(122, 142, 152, 0.10);
-    --md-morandi-lavender: #A898A8;
-    --md-morandi-lavender-bg: rgba(168, 152, 168, 0.10);
-    --md-morandi-sage: #8CA084;
-    --md-morandi-sage-bg: rgba(140, 160, 132, 0.10);
-    --md-morandi-taupe: #A89888;
-    --md-morandi-rose: #B89890;
+    --md-morandi-blue: #3E6475;
+    --md-morandi-blue-light: #8BAAB8;
+    --md-morandi-blue-bg: rgba(62, 100, 117, 0.11);
+    --md-morandi-lavender: #65728C;
+    --md-morandi-lavender-bg: rgba(101, 114, 140, 0.10);
+    --md-morandi-sage: #63786D;
+    --md-morandi-sage-bg: rgba(99, 120, 109, 0.12);
+    --md-morandi-taupe: #7C685D;
+    --md-morandi-rose: #875F69;
 
-    --md-morandi-serif: 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
-    --md-morandi-sans: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --md-morandi-serif: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    --md-morandi-sans: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --md-morandi-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
 }
 
 /* ---------- 深色模式 ---------- */
 [data-md-color-scheme="slate"] {
-    --md-default-bg-color: #2D2B29;
-    --md-default-bg-color--light: #353331;
-    --md-default-bg-color--lighter: #454341;
+    --md-default-bg-color: #0F151A;
+    --md-default-bg-color--light: #151E25;
+    --md-default-bg-color--lighter: #202B34;
 
-    --md-default-fg-color: #F0EDE8;
-    --md-default-fg-color--light: #D5D3D0;
-    --md-default-fg-color--lighter: #B5B3B0;
-    --md-default-fg-color--lightest: #8A8886;
+    --md-default-fg-color: #EDF3F6;
+    --md-default-fg-color--light: #CED9DF;
+    --md-default-fg-color--lighter: #97A8B3;
+    --md-default-fg-color--lightest: #6F818C;
 
-    --md-primary-fg-color: #2D2B29;
-    --md-primary-fg-color--light: #353331;
-    --md-primary-fg-color--dark: #454341;
-    --md-primary-bg-color: #8FA3AD;
-    --md-primary-bg-color--light: #A8B8C0;
-    --md-primary-bg-color--dark: #7A8E98;
+    --md-primary-fg-color: #EDF3F6;
+    --md-primary-fg-color--light: #EDF3F6;
+    --md-primary-fg-color--dark: #C8D7DF;
+    --md-primary-bg-color: #121B22;
+    --md-primary-bg-color--light: #1B2730;
+    --md-primary-bg-color--dark: #0F151A;
 
-    --md-accent-fg-color: #2D2B29;
-    --md-accent-bg-color: #A8B8C0;
+    --md-accent-fg-color: #0F151A;
+    --md-accent-bg-color: #93BBC8;
 
-    --md-morandi-bg: #2D2B29;
-    --md-morandi-surface: #353331;
-    --md-morandi-border: #454341;
-    --md-morandi-text: #F0EDE8;
-    --md-morandi-text-secondary: #D5D3D0;
-    --md-morandi-text-tertiary: #B5B3B0;
-    --md-morandi-blue-bg: rgba(143, 163, 173, 0.15);
-    --md-morandi-lavender-bg: rgba(168, 152, 168, 0.15);
-    --md-morandi-sage-bg: rgba(140, 160, 132, 0.15);
+    --md-morandi-bg: #0F151A;
+    --md-morandi-surface: #151E25;
+    --md-morandi-border: #293741;
+    --md-morandi-text: #EDF3F6;
+    --md-morandi-text-secondary: #CED9DF;
+    --md-morandi-text-tertiary: #97A8B3;
+    --md-morandi-blue: #93BBC8;
+    --md-morandi-blue-light: #BDD4DD;
+    --md-morandi-blue-bg: rgba(147, 187, 200, 0.12);
+    --md-morandi-lavender-bg: rgba(117, 134, 161, 0.13);
+    --md-morandi-sage-bg: rgba(112, 142, 128, 0.13);
 }
 
 /* ---------- 强制所有文字深色（浅色模式） ---------- */
@@ -125,16 +122,16 @@
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-    font-family: var(--md-morandi-serif);
-    font-weight: 600;
+    font-family: var(--md-morandi-sans);
+    font-weight: 700;
     color: var(--md-morandi-text) !important;
 }
 
 .md-typeset h1 {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
     margin-bottom: 1.2rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--md-morandi-blue-bg);
+    border-bottom: 1px solid var(--md-morandi-border);
 }
 
 .md-typeset h2 {
@@ -156,20 +153,20 @@
 
 .md-typeset p {
     margin-bottom: 1.2rem;
-    text-align: justify;
+    text-align: start;
     color: var(--md-morandi-text) !important;
 }
 
 /* ---------- 链接 ---------- */
 .md-typeset a {
-    color: #5A7A8A;
+    color: var(--md-morandi-blue);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s ease;
 }
 
 .md-typeset a:hover {
-    border-bottom-color: #5A7A8A;
+    border-bottom-color: var(--md-morandi-blue);
 }
 
 /* ---------- 代码 ---------- */
@@ -177,14 +174,14 @@
     font-family: var(--md-morandi-mono);
     font-size: 0.85em;
     background: var(--md-morandi-surface);
-    color: #7A6A8A;
+    color: var(--md-morandi-blue);
     padding: 0.15em 0.4em;
     border-radius: 4px;
     border: 1px solid var(--md-morandi-border);
 }
 
 .md-typeset pre {
-    background: #353331 !important;
+    background: #233039 !important;
     border-radius: 10px;
     padding: 1rem;
     margin: 1.2rem 0;
@@ -204,14 +201,14 @@
 }
 
 .md-typeset .highlight {
-    background: #302E2B !important;
-    border: 1px solid #57514B;
+    background: #1E2A33 !important;
+    border: 1px solid #344754;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .md-typeset .highlight pre {
-    background: #302E2B !important;
+    background: #1E2A33 !important;
     color: #F4EFE7 !important;
     margin: 0;
 }
@@ -228,20 +225,20 @@
 .md-typeset .highlight .kd,
 .md-typeset .highlight .kn,
 .md-typeset .highlight .ow {
-    color: #D9B8A9 !important;
+    color: #D8B7C8 !important;
 }
 
 .md-typeset .highlight .s,
 .md-typeset .highlight .s1,
 .md-typeset .highlight .s2,
 .md-typeset .highlight .sb {
-    color: #BFD0A8 !important;
+    color: #B8D4BF !important;
 }
 
 .md-typeset .highlight .c,
 .md-typeset .highlight .c1,
 .md-typeset .highlight .cm {
-    color: #B7AEA5 !important;
+    color: #A7B5BF !important;
 }
 
 .md-typeset .highlight .n,
@@ -255,7 +252,7 @@
 .md-typeset .highlight .mi,
 .md-typeset .highlight .mf,
 .md-typeset .highlight .kc {
-    color: #D6C29F !important;
+    color: #D7C6A6 !important;
 }
 
 .md-clipboard {
@@ -292,7 +289,7 @@
 }
 
 .md-typeset .admonition-title {
-    font-family: var(--md-morandi-serif);
+    font-family: var(--md-morandi-sans);
     font-weight: 600;
     color: var(--md-morandi-text) !important;
 }
@@ -333,7 +330,7 @@
     font-weight: 600;
     padding: 0.7rem 1rem;
     border-bottom: 2px solid var(--md-morandi-blue-light);
-    font-family: var(--md-morandi-serif);
+    font-family: var(--md-morandi-sans);
 }
 
 .md-typeset td {
@@ -371,12 +368,13 @@
 /* ---------- 导航栏 ---------- */
 .md-header {
     background: var(--md-primary-bg-color);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--md-morandi-border);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02);
 }
 
 .md-header__title {
-    font-family: var(--md-morandi-serif);
-    font-weight: 600;
+    font-family: var(--md-morandi-sans);
+    font-weight: 700;
     color: var(--md-primary-fg-color) !important;
 }
 
@@ -422,17 +420,17 @@
 
 .md-nav__link--active {
     background: var(--md-morandi-blue-bg);
-    color: #5A7A8A !important;
-    font-weight: 500;
+    color: var(--md-morandi-blue) !important;
+    font-weight: 700;
 }
 
 .md-nav__title {
-    font-family: var(--md-morandi-serif);
-    font-weight: 600;
+    font-family: var(--md-morandi-sans);
+    font-weight: 700;
     color: var(--md-morandi-text-tertiary) !important;
     font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0;
 }
 
 /* ---------- 标签页 ---------- */
@@ -442,7 +440,7 @@
 }
 
 .md-tabs__link {
-    font-family: var(--md-morandi-serif);
+    font-family: var(--md-morandi-sans);
     font-weight: 500;
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
@@ -463,6 +461,23 @@
     font-weight: 600;
 }
 
+.md-typeset .md-button {
+    border-color: var(--md-morandi-border);
+    color: var(--md-morandi-text) !important;
+    background: transparent;
+}
+
+.md-typeset .md-button:hover {
+    border-color: var(--md-morandi-blue);
+    background: var(--md-morandi-blue-bg);
+}
+
+.md-typeset .md-button--primary {
+    border-color: var(--md-morandi-blue);
+    background: var(--md-morandi-blue);
+    color: #F4F8FA !important;
+}
+
 /* ---------- 内容区域 ---------- */
 .md-main__inner {
     background: var(--md-morandi-bg);
@@ -470,7 +485,7 @@
 
 .md-content {
     background: transparent;
-    max-width: 820px;
+    max-width: 940px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -486,9 +501,9 @@
 .study-card {
     background: var(--md-morandi-surface);
     border: 1px solid var(--md-morandi-border);
-    border-radius: 14px;
+    border-radius: 8px;
     padding: 1.1rem 1.2rem;
-    box-shadow: 0 6px 18px rgba(45, 43, 41, 0.05);
+    box-shadow: 0 8px 20px rgba(15, 26, 35, 0.05);
 }
 
 .study-card h3 {
