@@ -1,52 +1,97 @@
-# 2026 AI 软件开发实习生 面试冲刺手册
+# AI Agent 工程学习手册
 
-> 适用岗位：AI Native、AI Agent、RAG、Python 开发、后端开发等实习生岗位  
-> 时效：2026 年 5 月最新面试题与高频考点汇总  
-> 建议学习周期：14 天
+<div class="learning-hero" markdown>
+
+<div class="learning-hero__copy" markdown>
+
+<span class="hero-eyebrow">Agent Learning Workbench</span>
+
+<h1 class="hero-title">把 Agent 学习做成一条可复习、可实践、可追问的主线</h1>
+
+<p class="hero-subtitle">围绕 LLM 应用、Context、RAG、Tool/MCP、Agent 编排、Eval、安全、Python 与工程基础，把知识点、代码实践、八股答案和真题追问接成同一套学习台。</p>
+
+<div class="hero-actions" markdown>
+
+[进入学习地图](AI%20Agent面试实践/学习地图.md){ .md-button .md-button--primary }
+[刷 Agent 八股](AI%20Agent面试实践/面试八股总览.md){ .md-button }
+[打开面试题库](面试题库/index.md){ .md-button }
+
+</div>
+
+</div>
+
+<div class="learning-hero__rail" markdown>
+
+<span class="rail-title">推荐顺序</span>
+
+<ol class="rail-steps">
+<li><strong>理解</strong><span>先看体系图和专题详解</span></li>
+<li><strong>实践</strong><span>再看代码链路与项目复盘</span></li>
+<li><strong>背诵</strong><span>压缩成八股答案和知识卡</span></li>
+<li><strong>训练</strong><span>用真题与追问暴露盲区</span></li>
+</ol>
+
+</div>
+
+</div>
+
+<div class="signal-grid" markdown>
+
+<div class="signal-cell" markdown>
+<span class="signal-value">6</span>
+<span class="signal-label">主线阶段</span>
+</div>
+
+<div class="signal-cell" markdown>
+<span class="signal-value">2</span>
+<span class="signal-label">闭环示范专题</span>
+</div>
+
+<div class="signal-cell" markdown>
+<span class="signal-value">4</span>
+<span class="signal-label">训练层次</span>
+</div>
+
+<div class="signal-cell" markdown>
+<span class="signal-value">1</span>
+<span class="signal-label">统一复习顺序</span>
+</div>
+
+</div>
 
 ---
 
-## 快速开始
+## 一、先选一个入口
 
-<div class="study-grid" markdown>
+<div class="route-grid" markdown>
 
-<div class="study-card" markdown>
+<div class="route-panel route-panel--core" markdown>
 
-### AI Agent 系统学习
+### 系统学习 Agent
 
-从 LLM & Token、Context Window、RAG、Tool/MCP 到 Agent Skill，建立完整面试知识图谱。
+按 `LLM 应用基础 → Context → RAG → Tool/MCP → 编排 → 治理` 建立完整知识地图，适合第一遍打底。
 
-[进入 AI Agent 总览](AI%20Agent面试实践/index.md){ .md-button }
-
-</div>
-
-<div class="study-card" markdown>
-
-### 底层框架全景图
-
-用一张图讲清 Structural、Container、Bridge、Orchestration、Customization 五层架构。
-
-[查看全景图](AI%20Agent面试实践/00_AI底层框架全景图/index.md){ .md-button }
+[查看学习地图](AI%20Agent面试实践/学习地图.md){ .md-button }
 
 </div>
 
-<div class="study-card" markdown>
+<div class="route-panel route-panel--project" markdown>
 
-### Python 面试实践
+### 从项目倒推知识
 
-从零基础语法到数据结构、高频手撕题和进阶面试题，适合补齐编码能力。
+用知识库 Agent、工具型 Agent 和代码 Agent 的共性链路，把知识点落回架构、失败点和评测。
 
-[学习 Python](Python面试实践/00_零基础入门/01_变量与数据类型.md){ .md-button }
+[进入项目复盘](项目实战与复盘/index.md){ .md-button }
 
 </div>
 
-<div class="study-card" markdown>
+<div class="route-panel route-panel--interview" markdown>
 
-### 模拟面试题库
+### 直接开始练题
 
-按五步结构法练习回答：核心定义、边界区分、底层原理、常见坑点、生产优化。
+先刷八股，再练工程追问和公开面试题；遇到答不清的题再回专题页补原理。
 
-[开始模拟面试](AI%20Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md){ .md-button }
+[进入题库](面试题库/index.md){ .md-button }
 
 </div>
 
@@ -54,297 +99,207 @@
 
 ---
 
-## AI Agent 知识主线
+## 二、Agent 知识主线
 
 ```mermaid
 graph LR
-    A[LLM & Token] --> B[Context Window]
-    B --> C[Prompt / RAG / Memory]
-    C --> D[Tool / Function Call]
-    D --> E[MCP]
-    E --> F[Agent: Explore / Plan / Act]
-    F --> G[Agent Skill]
-    F --> H[Eval / Safety / Trace]
+    A[LLM 应用基础<br/>Token / Prompt / Structured Output] --> B[Context<br/>Window / Memory / Compression]
+    B --> C[RAG<br/>Chunk / Retrieval / Rerank / Citation]
+    C --> D[Tool 与 MCP<br/>Schema / Runtime / Protocol]
+    D --> E[Agent 编排<br/>Workflow / Planner / LangGraph]
+    E --> F[治理<br/>Eval / Trace / Safety / HITL]
+    F --> G[面试输出<br/>八股 / 真题 / 项目追问]
 ```
 
----
+<div class="topic-grid" markdown>
 
-## 内容概览
+<div class="topic-block" markdown>
+<span class="topic-index">01</span>
+### LLM 应用基础
+理解模型输入输出、Prompt、结构化输出与工具调用的最小闭环。
 
-本页面保留完整冲刺手册正文，右侧目录会自动生成章节导航。
+[进入基础专题](AI%20Agent面试实践/00_AI底层框架全景图/index.md)
+</div>
 
----
+<div class="topic-block" markdown>
+<span class="topic-index">02</span>
+### Context 与 Memory
+回答模型当前看见什么、历史怎么压缩、记忆何时该检索。
 
-## 一、AI Agent 方向（必考核心）
+[进入 Context 专题](AI%20Agent面试实践/08_Context工程/index.md)
+</div>
 
-> 85% 的面试题集中在 Agent 架构、RAG、LangChain/LangGraph 等技术栈。  
-> 面试核心从“会背概念”升级为“能讲原理 + 能落地”。
+<div class="topic-block" markdown>
+<span class="topic-index">03</span>
+### RAG 检索工程
+把索引、召回、精排、引用和评测连成一条可靠链路。
 
-### 1.1 Agent 基础架构
+[进入 RAG 专题](AI%20Agent面试实践/03_RAG检索增强/index.md)
+</div>
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| AI Agent 定义与本质区别 | ⭐⭐⭐⭐ | 具备 **感知→规划→行动→记忆** 全闭环能力；与 Chatbot 的区别在于“自主决策 + 行动能力”；与 LLM / RAG 的本质差异在于“能力边界” |
-| Agentic Loop | ⭐⭐⭐⭐ | **Think → Act → Observe** 循环；经典框架 ReAct（Reasoning + Acting）；能画出流程图并用实例讲解 |
-| ReAct / Function Call | ⭐⭐⭐ | ReAct 的 thought-action 交替机制；Function Call 是 Agent 调用外部工具的核心协议，需了解 JSON Schema 参数定义 |
-| Multi-Agent 协作 | ⭐⭐⭐ | 多 Agent 的任务分配、通信机制、角色分工，可用 LangGraph 实现 |
-| MCP（Model Context Protocol） | ⭐⭐⭐ | 模型上下文协议，解决 LLM 与外部工具/数据源的标准化连接问题，已在字节、阿里等大厂 Agent 岗面试中问及 |
-| Agent Skills 设计 | ⭐⭐⭐ | Skill 的概念、组成部分（名称、描述、输入参数、执行逻辑、输出格式），如何设计可复用的 Skill 库 |
-| 工具调用容错机制 | ⭐⭐ | 置信度阈值过滤、异常重试队列、人工干预降级通道 |
+<div class="topic-block" markdown>
+<span class="topic-index">04</span>
+### Tool 与 MCP
+理解工具描述、执行边界、容错、安全与协议标准化。
 
-**真题示例**：
-- Q：Agentic Loop 是什么？画出流程（字节/阿里/腾讯均考）
-- Q：AI Agent 和传统 LLM Chatbot 的本质区别是什么？
-- Q：你有没有了解过 Harness 工程？主要难点是什么？
+[进入 Tool 专题](AI%20Agent面试实践/09_Tool与MCP工程实践/index.md)
+</div>
 
-### 1.2 记忆系统
+<div class="topic-block" markdown>
+<span class="topic-index">05</span>
+### Agent 编排
+掌握 ReAct、Workflow、LangGraph、Planner、Skill 与多 Agent 取舍。
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 短期记忆 vs 长期记忆 | ⭐⭐⭐⭐ | 短期记忆（对话窗口内、会话级别）；长期记忆（跨会话持久化，向量库 + 摘要）；分层设计思路 |
-| 记忆管理策略 | ⭐⭐⭐ | 滑动窗口、摘要压缩、重要信息提取 + 向量化存储、Dendritic Network 实现记忆关联 |
-| 大量记忆处理 | ⭐⭐⭐ | Token 限制下的记忆压缩策略：滑动窗口截断、关键信息摘要、分层索引 + 检索式召回 |
-| 不同 Agent 记忆对比 | ⭐⭐⭐ | 能对比 Hermès vs OpenClaw 等产品的记忆系统优劣，如 Hermès 的自我进化机制 |
+[进入编排专题](AI%20Agent面试实践/04_LangChain_LangGraph/index.md)
+</div>
 
-### 1.3 RAG 检索增强生成
+<div class="topic-block" markdown>
+<span class="topic-index">06</span>
+### Eval 与安全
+学会用指标、Trace、护栏和人工确认把系统从 Demo 推向可靠。
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| RAG 原理与流程 | ⭐⭐⭐⭐ | 索引→检索→增强→生成四阶段，能画出完整链路图 |
-| Embedding 层优化 | ⭐⭐⭐⭐ | 选型 BGE/E5 等模型、微调 Embedding 适配专业领域、chunk 切分策略 |
-| 检索层优化 | ⭐⭐⭐⭐ | **混合检索**（语义检索 + BM25 关键词检索）、动态权重 α 调整（实体类查询 α=0.3，分析类查询 α=0.7）、**重排序**（Reranker 二次精排） |
-| 缓存优化 | ⭐⭐⭐ | 多级缓存架构（Redis → 内存 → 磁盘）、基于 TTL 和内容变化的双因素失效策略、热点预加载 |
-| 评估指标 | ⭐⭐⭐⭐ | 命中率、MRR、NDCG、精确率/召回率、答案正确率/忠实度 |
-| RAG 体量与规模 | ⭐⭐ | 能明确说出知识库规模（如 10 万 + 文档、50 万 + chunk），以及如何应对大规模检索的性能瓶颈 |
+[进入治理专题](AI%20Agent面试实践/11_EvalTraceSafety/index.md)
+</div>
 
-### 1.4 LangChain / LangGraph 开发框架
-
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| LangChain 核心组件 | ⭐⭐⭐⭐ | Chains、PromptTemplate、Tools、Memory、Retrievers、Agents |
-| LangChain vs LangGraph | ⭐⭐⭐⭐ | LangChain 适合线性 Chain 串联；LangGraph 适合复杂工作流 / 多 Agent 编排（图结构、状态管理、条件分支） |
-| 模块化 Chain 设计 | ⭐⭐⭐ | 将检索、生成、后处理拆分为独立组件，依赖注入式 PromptTemplate 管理 |
-| LCEL（LangChain Expression Language） | ⭐⭐ | 链式表达语法，构建可组合的 Chain |
-
-### 1.5 Prompt Engineering 与 AI 编程工具
-
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| AI 编程工具使用 | ⭐⭐⭐⭐ | Claude Code、Cursor、Gemini 等至少一种工具的实际使用经验 + 对比，能讲清楚工作流程 |
-| AI 代码审查（CR） | ⭐⭐⭐ | AI 生成代码失败 / 逻辑错误时如何进行 Code Review，如在“设计记忆模块”等场景中的具体做法 |
-| AI 辅助开发流程自动化 | ⭐⭐ | 结合 AI 工具实现代码生成→调试→测试→部署全流程自动化 |
-
-### 1.6 模型微调与性能优化
-
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 参数高效微调 | ⭐⭐ | LoRA、QLoRA、P-Tuning 核心原理与适用场景 |
-| 推理加速 | ⭐⭐ | 量化（INT8/INT4）、蒸馏、Flash Attention 等工程化手段 |
-| Agent 后训练 | ⭐⭐ | Tool-Use 微调、RLHF/DPO 对齐训练 |
-
-### 1.7 AI Agent 方向学习资源推荐
-
-- [AI Agent 智能体全栈面试宝典（CSDN）](https://blog.csdn.net/weixin_42376192/article/details/159526451) —— 2026 大厂 AI 岗核心考点 + 真题 + 答题模板，全链路拆解
-- [2025-2026 AI Agent 面试真题大全（双视角答案版）](https://gitcode.csdn.net/69fe281754b52172bc728dcb.html) —— 30 道高频真题，覆盖 8 大模块，每道题提供“有工作经验”和“背面经”两个视角的答案
-- [AI 大模型面试通关秘籍（百度）](https://developer.baidu.com/article/detail.html?id=6786952) —— 7 天掌握核心框架，100 个高频考点解析
-- [2026 的你，应该知道哪些 AI 面试题？（牛客）](https://www.nowcoder.com/discuss/847976149895376896) —— 四类高频 AI 面试问题与应对策略
+</div>
 
 ---
 
-## 二、Python 方向
+## 三、学习闭环
 
-### 2.1 语言特性
+<div class="loop-board" markdown>
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 可变对象 vs 不可变对象 | ⭐⭐⭐⭐ | str / int / tuple 不可变（所有“修改”返回新对象），list / dict / set 可原地修改；陷阱：可变对象做默认参数 `def func(items=[])` 致状态残留 |
-| 装饰器与闭包 | ⭐⭐⭐⭐ | 本质是“接收函数、返回函数”的高阶函数；带参数装饰器需三层嵌套；`@functools.wraps` 保留元信息 |
-| 生成器与迭代器 | ⭐⭐⭐⭐ | `yield` 惰性求值；`yield from` 委托迭代避免手动循环；处理 `.send()` / `.throw()` / `.close()` 协议 |
-| GIL 与并发 | ⭐⭐⭐⭐ | 同一时刻只有一个线程执行 Python 字节码；I/O 密集型用 threading / asyncio，CPU 密集型用 multiprocessing |
-| 浅拷贝 vs 深拷贝 | ⭐⭐⭐ | `copy.copy()` vs `copy.deepcopy()`，list / dict 嵌套场景中的陷阱 |
+<div class="loop-stage" markdown>
+<strong>专题详解</strong>
+<span>先讲概念、原理、图解和工程坑点。</span>
+</div>
 
-### 2.2 数据结构与常用库
+<div class="loop-stage" markdown>
+<strong>代码实践</strong>
+<span>用 RAG、记忆、Tool、LangGraph 页面对照实现。</span>
+</div>
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 内置数据结构 | ⭐⭐⭐⭐ | list / dict / set / tuple 的底层实现（动态数组、哈希表）、时间复杂度、适用场景 |
-| 列表推导式 / 生成器表达式 | ⭐⭐⭐ | `[x for x in range(10)]` vs `(x for x in range(10))` 内存差异 |
-| 上下文管理器 | ⭐⭐⭐ | `with` 语句、`__enter__` / `__exit__`、`contextlib` |
-| Pandas / NumPy | ⭐⭐⭐ | 数据处理基础，常用于数据清洗和特征工程 |
-| 异常处理 | ⭐⭐ | try / except / finally / else、自定义异常、异常链 |
+<div class="loop-stage" markdown>
+<strong>项目复盘</strong>
+<span>把知识点绑定到知识库、工具和代码 Agent 链路。</span>
+</div>
 
-### 2.3 面试高频手撕题
+<div class="loop-stage" markdown>
+<strong>题库训练</strong>
+<span>八股先压缩答案，真题再练追问。</span>
+</div>
 
-| 题型 | 典型题 |
-|------|--------|
-| 字符串 | 最长不重复子串（滑动窗口） |
-| 排序 | 快速排序（时间复杂度、稳定性分析） |
-| 数据结构 | 判断 BST 合法性（递归验证范围） |
-| 设计题 | LRU 缓存（哈希表 + 双向链表） |
-
-### 2.4 Python 方向学习资源推荐
-
-- [Python 面试高频问题总结（php中文网）](https://www.php.cn/faq/2180502.html) —— 可变对象、装饰器、生成器、GIL 四大核心考点详细解析
-- [Java/Python/前端/测试/算法全技术岗面试指南（CSDN）](https://blog.csdn.net/weixin_42376192/article/details/159714346) —— 2025-2026 五大技术岗真题拆解 + 标准答案
-- [2026 年 Python 笔试面试题及答案](https://www.renrendoc.com/paper/522002585.html) —— 典型手撕题含详解（滑动窗口、快排、BST 判断、LRU 缓存）
+</div>
 
 ---
 
-## 三、后端方向（通用八股）
+## 四、先用四个专题跑通闭环
 
-### 3.1 计算机网络
+<div class="workbench-grid" markdown>
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 网络模型 | ⭐⭐⭐⭐ | OSI 七层 vs TCP/IP 四层/五层，各层协议与设备 |
-| TCP vs UDP | ⭐⭐⭐⭐ | 核心区别、TCP 三次握手/四次挥手全流程（为什么握手 3 次、挥手 4 次）、可靠传输机制 |
-| HTTP 全版本演进 | ⭐⭐⭐⭐ | HTTP1.1 vs 2.0 vs 3.0 核心差异（长连接、多路复用、0-RTT） |
-| QUIC 协议 | ⭐⭐⭐⭐ | 2026 超高频考点：基于 UDP、0-RTT/1-RTT 握手、连接迁移、无队头阻塞 |
-| HTTPS 与 TLS | ⭐⭐⭐⭐ | HTTPS 全流程、TLS1.2 vs TLS1.3、对称/非对称加密、证书链 |
-| 跨域与安全 | ⭐⭐⭐ | CORS 预检请求、Cookie 安全属性（HttpOnly/Secure/SameSite）、CSRF/XSS |
-| DNS | ⭐⭐⭐ | DNS 解析全流程、DoH/DoQ 新考点 |
-| 其他协议 | ⭐⭐ | WebSocket（全双工通信）、RPC vs HTTP |
+<div class="workbench-panel" markdown>
 
-### 3.2 操作系统
+### RAG 检索工程
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 进程 vs 线程 vs 协程 | ⭐⭐⭐⭐ | 资源分配最小单位 vs CPU 调度最小单位 vs 用户态轻量线程 |
-| 进程间通信（IPC） | ⭐⭐⭐ | 管道、消息队列、共享内存、信号量、Socket、信号、匿名管道 7 种方式 |
-| 内存管理 | ⭐⭐⭐⭐ | 分页/分段、虚拟内存、页面置换算法（LRU、FIFO、Clock） |
-| 死锁 | ⭐⭐⭐ | 死锁产生的四个必要条件（互斥、持有并等待、不可剥夺、循环等待）及解决方案 |
-| 并发同步 | ⭐⭐⭐ | 锁机制（悲观锁/乐观锁/自旋锁）、CAS、ABA 问题用版本号解决 |
-| 新增考点 | ⭐⭐ | eBPF（内核可编程扩展）、容器内核机制 |
+先看证据链，再看最小实现，最后把排障答案练短。
 
-### 3.3 数据库 MySQL
+- [专题入口](AI%20Agent面试实践/03_RAG检索增强/index.md)
+- [代码实践](AI%20Agent面试实践/03_RAG检索增强/02_RAG完整链路_代码实践.md)
+- [高频八股](AI%20Agent面试实践/03_RAG检索增强/03_RAG高频八股.md)
+- [真题与追问](AI%20Agent面试实践/03_RAG检索增强/04_RAG真题与工程追问.md)
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 事务隔离级别 | ⭐⭐⭐⭐ | Read Uncommitted → Read Committed → Repeatable Read → Serializable，各级别的并发问题 |
-| MVCC 实现原理 | ⭐⭐⭐⭐ | Read View + Undo Log 版本链、隐藏字段 DB_TRX_ID / DB_ROLL_PTR，能讲清完整流程 |
-| 索引设计与失效 | ⭐⭐⭐⭐ | B+Tree 结构、聚簇索引 vs 非聚簇索引、最左前缀原则、索引失效场景（函数/运算/类型转换/OR 等） |
-| 慢 SQL 优化 | ⭐⭐⭐ | EXPLAIN 分析执行计划、覆盖索引、分库分表、读写分离 |
-| 持久性实现（WAL） | ⭐⭐⭐⭐ | Redo Log 实现持久性，WAL 机制（先写日志再写磁盘，顺序 IO 写入快） |
-| 数据一致性保障 | ⭐⭐⭐ | MySQL 与 Redis 的数据一致性保证：先更新 DB → 再删除缓存（Cache Aside Pattern），延迟双删策略 |
+</div>
 
-### 3.4 Redis
+<div class="workbench-panel" markdown>
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| Redis 为什么快 | ⭐⭐⭐⭐ | 纯内存操作、单线程主线程无锁竞争、I/O 多路复用（epoll）、高效底层数据结构 C 语言实现 |
-| 常用数据类型 | ⭐⭐⭐⭐ | String / Hash / List / Set / ZSet 底层结构 + 经典场景 |
-| 缓存穿透/击穿/雪崩 | ⭐⭐⭐⭐ | 穿透：布隆过滤器/空值缓存；击穿：互斥锁；雪崩：随机过期时间/多级缓存 |
-| 分布式锁 | ⭐⭐⭐⭐ | SETNX + 过期时间、Redlock 算法、可重入实现 |
-| 持久化 | ⭐⭐⭐⭐ | RDB 快照 + AOF 日志，各自的优缺点和适用场景 |
-| 过期键删除机制 | ⭐⭐⭐ | 惰性删除（访问时检查）+ 定期删除（定时抽样扫描） |
-| 高可用 | ⭐⭐⭐ | 主从复制（全量 + 增量同步）、哨兵模式（故障自动转移）、Cluster 集群（分片存储 + 自动故障转移） |
+### Tool Calling 与 MCP
 
-### 3.5 消息队列 MQ
+把工具能力、运行时边界、协议连接和安全追问放在一条线上。
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 消息积压处理 | ⭐⭐⭐⭐ | 临时扩容 consumer、增加分区、消息过期丢弃、监控告警 |
-| 消息顺序性保证 | ⭐⭐⭐ | 分区内有序、全局有序（单分区）、key 路由保证同类消息进同一分区 |
-| 延迟消息实现 | ⭐⭐ | 死信队列 + TTL、延迟队列插件 |
+- [专题入口](AI%20Agent面试实践/09_Tool与MCP工程实践/index.md)
+- [Tool 学习页](AI%20Agent面试实践/09_Tool与MCP工程实践/01_Tool设计原则与容错.md)
+- [高频八股](AI%20Agent面试实践/09_Tool与MCP工程实践/03_Tool与MCP高频八股.md)
+- [真题与追问](AI%20Agent面试实践/09_Tool与MCP工程实践/04_Tool与MCP真题与工程追问.md)
 
-### 3.6 系统设计
+</div>
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| JWT 令牌认证 | ⭐⭐⭐⭐ | JWT 结构（Header.Payload.Signature）、生成校验流程、无状态 vs 有状态 |
-| 拦截器/过滤器设计 | ⭐⭐⭐ | Spring Interceptor vs Filter、认证/鉴权/日志的统一拦截、责任链模式 |
-| 分布式 Session | ⭐⭐⭐ | Session 共享方案：Redis 集中存储、JWT 无状态方案、Sticky Session |
+</div>
 
-### 3.7 后端方向学习资源推荐
+<div class="workbench-grid" markdown>
 
-- [2026 后端八股文学路线（全网最细）](https://www.e-com-net.com/article/2041920810616152064.htm) —— 分 4 阶段学习路线，标注 2026 新增考点，含“能力验证三角”策略
-- [字节后端实习二面面经（腾讯云）](https://cloud.tencent.com/developer/article/2640240) —— 数据库隔离级别、MVCC 实现原理等实战面经详解
-- [2026 年 3 月最新计算机专业面试八股文（掘金）](https://juejin.cn/post/7613211639155949568) —— 五大核心模块全体系总结，标注高频考点与 2026 新增超高频考点
-- [Redis 面试题全解析（GitCode）](https://gitcode.csdn.net/6a013aea54b52172bc7302de.html) —— 基础入门 + 核心原理 + 高并发实战 + 高可用架构五大模块
-- [MySQL 事务与 MVCC 详解（CSDN）](https://blog.csdn.net/qq_64012735/article/details/159281138) —— 事务隔离级别、MVCC 实现原理、Redo Log 与 WAL 机制
+<div class="workbench-panel" markdown>
+
+### Context 与 Memory
+
+把窗口预算、压缩、结构化笔记和长期记忆边界一次拆清。
+
+- [专题入口](AI%20Agent面试实践/08_Context工程/index.md)
+- [Context 学习页](AI%20Agent面试实践/08_Context工程/01_Context工程核心概念与面试考点.md)
+- [高频八股](AI%20Agent面试实践/08_Context工程/05_Context与Memory高频八股.md)
+- [真题与追问](AI%20Agent面试实践/08_Context工程/06_Context与Memory真题与工程追问.md)
+
+</div>
+
+<div class="workbench-panel" markdown>
+
+### Eval、Trace 与 Safety
+
+从质量回归、失败链路和执行边界理解 Agent 为什么能治理。
+
+- [专题入口](AI%20Agent面试实践/11_EvalTraceSafety/index.md)
+- [学习页](AI%20Agent面试实践/11_EvalTraceSafety/01_EvalTraceSafety学习页.md)
+- [高频八股](AI%20Agent面试实践/11_EvalTraceSafety/02_EvalTraceSafety高频八股.md)
+- [真题与追问](AI%20Agent面试实践/11_EvalTraceSafety/03_EvalTraceSafety真题与工程追问.md)
+
+</div>
+
+</div>
 
 ---
 
-## 四、计算机基础（通用必考）
+## 五、项目与题库
 
-### 4.1 数据结构
+<div class="workbench-grid" markdown>
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 数组 / 链表 | ⭐⭐⭐⭐ | 数组随机访问 O(1)、插入删除 O(n)；链表 O(1) 增删头尾、遍历 O(n) |
-| 栈 / 队列 | ⭐⭐⭐ | 栈的 LIFO（函数调用）、队列的 FIFO（BFS、消息队列） |
-| 树 / 图 | ⭐⭐⭐⭐ | 二叉树遍历（前中后序、层序）、BST 性质、图的 BFS/DFS |
-| 哈希表 | ⭐⭐⭐⭐ | 哈希冲突解决（链表法 / 开放寻址）、HashMap 原理、负载因子与扩容 |
-| 堆 | ⭐⭐⭐ | 大顶堆 / 小顶堆、TopK 问题（堆排序 O(nlogK)） |
+<div class="workbench-panel" markdown>
 
-### 4.2 算法
+### 项目复盘
 
-| 考点 | 优先级 | 核心要点 |
-|------|--------|----------|
-| 排序算法 | ⭐⭐⭐⭐ | 快排（O(nlogn)、不稳定）、归并（O(nlogn)、稳定）、堆排，时间复杂度比较 |
-| 查找算法 | ⭐⭐⭐ | 二分查找（O(logn)）、变体（第一个等于 / 第一个大于） |
-| 动态规划 | ⭐⭐⭐⭐ | 爬楼梯、背包问题、最长公共子序列，核心：状态定义 + 转移方程 |
-| 双指针 / 滑动窗口 | ⭐⭐⭐ | 最长不重复子串、三数之和 |
-| 字符串匹配 | ⭐⭐ | KMP 算法（核心 next 数组）、Boyer-Moore |
+项目页重点看四件事：架构链路、难点拆解、评测指标、面试追问。
 
-### 4.3 计算机基础学习资源推荐
+- [项目复盘入口](项目实战与复盘/index.md)
+- [RAG 完整链路代码实践](AI%20Agent面试实践/03_RAG检索增强/02_RAG完整链路_代码实践.md)
+- [知识库 Agent 复盘模板](项目实战与复盘/01_知识库Agent复盘模板.md)
+- [工具型 Workflow Agent 复盘模板](项目实战与复盘/02_工具型WorkflowAgent复盘模板.md)
 
-- [2026 大厂校招笔试指南（牛客）](https://www.nowcoder.com/discuss/851107351640731648) —— 选择题核心考点拆解 + 知识点全矩阵（数据结构 / 操作系统 / 网络 / 数据库 / Linux / 编程语言）
-- [2026 大厂校招笔试指南（知乎）](https://zhuanlan.zhihu.com/p/2030641363767833534) —— 高频考点 + 真实趋势，考试结构分析
-- [美团工程师面试题总结](https://max.book118.com/index.html) —— 数据结构 / 算法 / 操作系统 / 网络 / 数据库全维度深度总结
+</div>
 
----
+<div class="workbench-panel" markdown>
 
-## 五、14 天冲刺计划
+### 面试训练
 
-### 第 1-3 天：计算机基础 + 后端
+题库按“标准答案 → 工程追问 → 公开题目 → 模拟口述”逐层加压。
 
-- **计算机网络**：网络模型 → TCP/UDP → HTTP/HTTPS → QUIC（2026 高频）
-- **操作系统**：进程/线程 → 内存管理 → 死锁 → 并发同步（含 CAS/ABA）
-- **Redis**：五种基础数据结构 → 缓存穿透/击穿/雪崩 → 分布式锁 → 持久化 → 高可用
-- **MySQL**：事务隔离级别 → MVCC 全流程 → 索引设计与失效 → 慢 SQL 优化 → 与 Redis 数据一致性
+- [Agent 面试八股总览](AI%20Agent面试实践/面试八股总览.md)
+- [公开面试题整理](AI%20Agent面试实践/公开面试题整理.md)
+- [综合模拟面试题库](AI%20Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md)
 
-### 第 4-6 天：AI Agent + RAG
+</div>
 
-- **Agent 核心**：Agent 定义与本质区别 → Agentic Loop / ReAct → 记忆系统 → Multi-Agent → MCP
-- **RAG 全链路**：索引→检索→增强→生成 → Embedding 优化 → 检索优化（混合检索 + 重排序） → 缓存 → 评估
-
-### 第 7-10 天：Python + 算法
-
-- **Python 语言特性**：可变/不可变对象 → 装饰器 → 生成器 → GIL → 深浅拷贝
-- **LangChain / LangGraph**：核心组件 → LangChain vs LangGraph → 模块化设计 → LCEL
-- **算法手撕**：快排 → 二分查找 → 滑动窗口 → DP 高频题 → TopK → LRU
-
-### 第 11-12 天：项目深挖 + 场景模拟
-
-- 项目梳理：RAG 部署链路 → 优化细节 → 评估指标 → 业务收益（效率提升百分比 / 成本）
-- 项目梳理：AI 编程工具使用 → AI 代码 CR 流程 → Agent 框架选型理由
-- 项目梳理：JWT 认证 → 分布式锁解决超卖 → MQ 消息积压
-
-### 第 13-14 天：查漏补缺 + 模拟面试
-
-- 回顾遗漏考点（Harness 工程、Agent 后训练、eBPF）
-- 模拟面试练习（用“是什么→为什么→怎么实现→有什么问题→怎么优化”的完整逻辑答每一题）
-
-### 攻坚策略
-
-1. **优先级**：通用基础 > AI Agent 方向 > Python > 后端八股 > 前沿技术
-2. **大厂侧重底层原理 + 算法（权重 40%）**，中厂多考基础应用 + 项目落地（项目权重 50%）
-3. **每道题按五点结构作答**（见附录）
+</div>
 
 ---
 
-## 附录：面试答题五步结构
+## 六、基础能力入口
 
-每道面试题建议按以下链路展开回答，避免零散背诵：
+<div class="foundation-strip" markdown>
 
-1. **核心定义** —— 一句话说清它是什么
-2. **与相似概念的边界区分** —— 它不是什么，和容易混淆的概念有何不同
-3. **底层原理 / 实现机制** —— 关键数据结构、流程、代码层面的支撑
-4. **常见坑点** —— 使用中容易犯的错误、边缘情况
-5. **生产环境优化方案** —— 规模变大后如何应对，监控、容错、性能调优措施
+[Python 从基础到面试](Python面试实践/00_零基础入门/01_变量与数据类型.md){ .foundation-link }
+[Python 语言特性](Python面试实践/01_Python语言特性/01_核心概念与面试答题模板.md){ .foundation-link }
+[高频算法手撕题](Python面试实践/03_面试高频手撕题/01_最长不重复子串.md){ .foundation-link }
+[七天速通复习](AI%20Agent面试实践/99_七天速通训练营/index.md){ .foundation-link }
 
-面试官真正考察的是这个完整链路，而非零散的知识点。祝冲刺顺利！
+</div>
 
----
-*最后更新：2026 年 5 月*
+!!! tip "使用方式"
+    第一遍从学习地图进专题；第二遍用项目复盘把知识点串起来；第三遍只刷八股、真题与高频追问。

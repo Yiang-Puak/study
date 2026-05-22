@@ -4,14 +4,12 @@
 # MkDocs 配置文件
 # docs_dir 指向 docs/ 目录（MkDocs 标准结构）
 
-site_name: AI 面试冲刺手册
-site_description: Python、AI Agent、Git 面试学习材料
+site_name: AI Agent 工程学习手册
+site_description: AI Agent、Python 与面试真题训练材料
 site_author: AI Interview Study Notes
 copyright: Copyright &copy; 2026 AI Interview Study Notes
 
 docs_dir: docs
-
-site_url: https://Yiang-Puak.github.io/study/
 
 theme:
   name: material
@@ -73,82 +71,115 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Yiang-Puak
+  - stylesheets/advanced.css
 
 nav:
   - 首页: index.md
 
-  - AI Agent 面试实践:
+  - Agent 工程体系:
+    - 学习地图: AI Agent面试实践/学习地图.md
     - 总览: AI Agent面试实践/index.md
-    - 00 AI 底层框架全景图:
+    - LLM 与 Context 基础:
       - 总览: AI Agent面试实践/00_AI底层框架全景图/index.md
       - AI 系统分层总览: AI Agent面试实践/00_AI底层框架全景图/01_AI系统分层总览.md
       - LLM 与 Token 底层原理: AI Agent面试实践/00_AI底层框架全景图/02_LLM与Token底层原理.md
       - Context Window 记忆加工容器: AI Agent面试实践/00_AI底层框架全景图/03_ContextWindow记忆加工容器.md
-    - 01 Agent 基础架构:
+    - Context 与 Memory:
+      - 先看专题入口: AI Agent面试实践/08_Context工程/index.md
+      - 1. Context 学习页: AI Agent面试实践/08_Context工程/01_Context工程核心概念与面试考点.md
+      - 2. Context 压缩实践: AI Agent面试实践/08_Context工程/02_Context压缩与总结实践.md
+      - 3. 结构化笔记与记忆: AI Agent面试实践/08_Context工程/03_结构化笔记与持久化记忆.md
+      - 4. 动态上下文检索: AI Agent面试实践/08_Context工程/04_动态上下文检索实践.md
+      - 5. Memory 学习页: AI Agent面试实践/02_记忆系统/01_核心概念与面试答题模板.md
+      - 6. Memory 代码实践: AI Agent面试实践/02_记忆系统/02_记忆系统_代码实践.md
+      - 7. 高频八股: AI Agent面试实践/08_Context工程/05_Context与Memory高频八股.md
+      - 8. 真题与追问: AI Agent面试实践/08_Context工程/06_Context与Memory真题与工程追问.md
+    - Agent 基础与编排:
+      - 先看专题入口: AI Agent面试实践/01_Agent基础架构/index.md
       - 核心概念初学者版: AI Agent面试实践/01_Agent基础架构/00_核心概念初学者版.md
       - 核心概念与面试答题模板: AI Agent面试实践/01_Agent基础架构/01_核心概念与面试答题模板.md
       - ReAct Agent 代码实践: AI Agent面试实践/01_Agent基础架构/02_ReAct_Agent_代码实践.md
       - MultiAgent 协作实践: AI Agent面试实践/01_Agent基础架构/03_MultiAgent_协作实践.md
       - 进阶面试真题与深度解析: AI Agent面试实践/01_Agent基础架构/04_进阶面试真题与深度解析.md
-    - 02 记忆系统:
-      - 核心概念与面试答题模板: AI Agent面试实践/02_记忆系统/01_核心概念与面试答题模板.md
-      - 记忆系统代码实践: AI Agent面试实践/02_记忆系统/02_记忆系统_代码实践.md
-    - 03 RAG 检索增强:
-      - 核心概念与面试答题模板: AI Agent面试实践/03_RAG检索增强/01_核心概念与面试答题模板.md
-      - RAG 完整链路代码实践: AI Agent面试实践/03_RAG检索增强/02_RAG完整链路_代码实践.md
-    - 04 LangChain / LangGraph:
-      - 核心概念与面试答题模板: AI Agent面试实践/04_LangChain_LangGraph/01_核心概念与面试答题模板.md
-      - LangGraph 多 Agent 工作流: AI Agent面试实践/04_LangChain_LangGraph/02_LangGraph_多Agent工作流.md
-    - 05 模型微调与性能优化:
-      - 核心概念与面试答题模板: AI Agent面试实践/05_模型微调与性能优化/01_核心概念与面试答题模板.md
-    - 06 Prompt 工程与 AI 编程工具:
-      - 核心概念与面试答题模板: AI Agent面试实践/06_Prompt工程与AI编程工具/01_核心概念与面试答题模板.md
-    - 07 Harness 工程深入:
-      - Harness 核心理念与面试考点: AI Agent面试实践/07_Harness工程深入/01_Harness核心理念与面试考点.md
-      - Harness 代码实践: AI Agent面试实践/07_Harness工程深入/02_Harness代码实践_Subagent与DispatchMap.md
-    - 08 Context 工程:
-      - 核心概念与面试考点: AI Agent面试实践/08_Context工程/01_Context工程核心概念与面试考点.md
-      - Context 压缩与总结实践: AI Agent面试实践/08_Context工程/02_Context压缩与总结实践.md
-      - 结构化笔记与持久化记忆: AI Agent面试实践/08_Context工程/03_结构化笔记与持久化记忆.md
-      - 动态上下文检索实践: AI Agent面试实践/08_Context工程/04_动态上下文检索实践.md
-    - 09 模拟面试题与答案:
-      - 综合模拟面试题库: AI Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md
-      - AI Agent 方向面试题合集: AI Agent面试实践/08_模拟面试题与答案/02_AIAgent方向面试题合集.md
-    - 10 Tool 与 MCP 工程实践:
-      - 总览: AI Agent面试实践/09_Tool与MCP工程实践/index.md
-      - Tool 设计原则与容错: AI Agent面试实践/09_Tool与MCP工程实践/01_Tool设计原则与容错.md
-      - MCP 协议核心概念: AI Agent面试实践/09_Tool与MCP工程实践/02_MCP协议核心概念.md
-    - 11 Agent 规划与 Skill:
-      - 总览: AI Agent面试实践/10_Agent规划与Skill/index.md
+      - 高频八股: AI Agent面试实践/01_Agent基础架构/05_Agent基础高频八股.md
+      - 真题与追问: AI Agent面试实践/01_Agent基础架构/06_Agent基础真题与工程追问.md
+      - Agent 规划与 Skill 总览: AI Agent面试实践/10_Agent规划与Skill/index.md
       - Explore-Plan-Act 决策框架: AI Agent面试实践/10_Agent规划与Skill/01_Explore_Plan_Act决策框架.md
       - Agent Skill 定制行为指南: AI Agent面试实践/10_Agent规划与Skill/02_AgentSkill定制行为指南.md
+    - Workflow 与 LangGraph:
+      - 先看专题入口: AI Agent面试实践/04_LangChain_LangGraph/index.md
+      - 1. 学习页: AI Agent面试实践/04_LangChain_LangGraph/01_核心概念与面试答题模板.md
+      - 2. 代码实践: AI Agent面试实践/04_LangChain_LangGraph/02_LangGraph_多Agent工作流.md
+      - 3. 高频八股: AI Agent面试实践/04_LangChain_LangGraph/03_Workflow与LangGraph高频八股.md
+      - 4. 真题与追问: AI Agent面试实践/04_LangChain_LangGraph/04_Workflow与LangGraph真题与工程追问.md
+    - RAG 检索工程:
+      - 先看专题入口: AI Agent面试实践/03_RAG检索增强/index.md
+      - 1. 学习页: AI Agent面试实践/03_RAG检索增强/01_核心概念与面试答题模板.md
+      - 2. 代码实践: AI Agent面试实践/03_RAG检索增强/02_RAG完整链路_代码实践.md
+      - 3. 高频八股: AI Agent面试实践/03_RAG检索增强/03_RAG高频八股.md
+      - 4. 真题与追问: AI Agent面试实践/03_RAG检索增强/04_RAG真题与工程追问.md
+    - Tool Calling 与 MCP:
+      - 先看专题入口: AI Agent面试实践/09_Tool与MCP工程实践/index.md
+      - 1. Tool 学习页: AI Agent面试实践/09_Tool与MCP工程实践/01_Tool设计原则与容错.md
+      - 2. MCP 学习页: AI Agent面试实践/09_Tool与MCP工程实践/02_MCP协议核心概念.md
+      - 3. 高频八股: AI Agent面试实践/09_Tool与MCP工程实践/03_Tool与MCP高频八股.md
+      - 4. 真题与追问: AI Agent面试实践/09_Tool与MCP工程实践/04_Tool与MCP真题与工程追问.md
+    - Prompt:
+      - 核心概念与面试答题模板: AI Agent面试实践/06_Prompt工程与AI编程工具/01_核心概念与面试答题模板.md
+    - Eval、Trace 与安全:
+      - 先看专题入口: AI Agent面试实践/11_EvalTraceSafety/index.md
+      - 1. 学习页: AI Agent面试实践/11_EvalTraceSafety/01_EvalTraceSafety学习页.md
+      - 2. 高频八股: AI Agent面试实践/11_EvalTraceSafety/02_EvalTraceSafety高频八股.md
+      - 3. 真题与追问: AI Agent面试实践/11_EvalTraceSafety/03_EvalTraceSafety真题与工程追问.md
+      - Harness 核心理念与面试考点: AI Agent面试实践/07_Harness工程深入/01_Harness核心理念与面试考点.md
+      - Harness 代码实践: AI Agent面试实践/07_Harness工程深入/02_Harness代码实践_Subagent与DispatchMap.md
+    - 模型与性能扩展:
+      - 模型微调与性能优化: AI Agent面试实践/05_模型微调与性能优化/01_核心概念与面试答题模板.md
 
-  - Vibe Coding 流程:
-    - 总览: VibeCoding流程/index.md
-    - Vibe Coding 完成项目标准流程: VibeCoding流程/01_VibeCoding完成项目标准流程.md
+  - 项目实战与复盘:
+    - 总览: 项目实战与复盘/index.md
+    - 知识库 Agent 复盘模板: 项目实战与复盘/01_知识库Agent复盘模板.md
+    - 工具型 Workflow Agent 复盘模板: 项目实战与复盘/02_工具型WorkflowAgent复盘模板.md
 
-  - 综合面试冲刺:
-    - 总览: 综合面试冲刺/index.md
-    - 综合面试冲刺手册: 综合面试冲刺/01_综合面试冲刺手册.md
+  - 面试题库:
+    - 总览: 面试题库/index.md
+    - 真题训练路线: 面试题库/真题训练路线.md
+    - Agent 面试八股总览: AI Agent面试实践/面试八股总览.md
+    - Agent 基础高频八股: AI Agent面试实践/01_Agent基础架构/05_Agent基础高频八股.md
+    - Context 与 Memory 高频八股: AI Agent面试实践/08_Context工程/05_Context与Memory高频八股.md
+    - RAG 高频八股: AI Agent面试实践/03_RAG检索增强/03_RAG高频八股.md
+    - Tool 与 MCP 高频八股: AI Agent面试实践/09_Tool与MCP工程实践/03_Tool与MCP高频八股.md
+    - Workflow 与 LangGraph 高频八股: AI Agent面试实践/04_LangChain_LangGraph/03_Workflow与LangGraph高频八股.md
+    - Eval、Trace 与 Safety 高频八股: AI Agent面试实践/11_EvalTraceSafety/02_EvalTraceSafety高频八股.md
+    - 公开面试题整理: AI Agent面试实践/公开面试题整理.md
+    - Context 与 Memory 真题追问: AI Agent面试实践/08_Context工程/06_Context与Memory真题与工程追问.md
+    - Agent 基础真题追问: AI Agent面试实践/01_Agent基础架构/06_Agent基础真题与工程追问.md
+    - RAG 真题与追问: AI Agent面试实践/03_RAG检索增强/04_RAG真题与工程追问.md
+    - Tool 与 MCP 真题与追问: AI Agent面试实践/09_Tool与MCP工程实践/04_Tool与MCP真题与工程追问.md
+    - Workflow 与 LangGraph 真题追问: AI Agent面试实践/04_LangChain_LangGraph/04_Workflow与LangGraph真题与工程追问.md
+    - Eval、Trace 与 Safety 真题追问: AI Agent面试实践/11_EvalTraceSafety/03_EvalTraceSafety真题与工程追问.md
+    - 综合模拟面试题库: AI Agent面试实践/08_模拟面试题与答案/01_综合模拟面试题库.md
+    - AI Agent 方向面试题合集: AI Agent面试实践/08_模拟面试题与答案/02_AIAgent方向面试题合集.md
+    - 高频追问题库: AI Agent面试实践/99_七天速通训练营/高频追问题库.md
+    - Python 面试真题整理: Python面试实践/面试真题整理.md
 
-  - Python 面试实践:
-    - 00 零基础入门:
+  - Python 学习与面试:
+    - 总览: Python与工程基础/index.md
+    - 学习路线: Python面试实践/学习路线.md
+    - 面试真题整理: Python面试实践/面试真题整理.md
+    - Python 零基础入门:
       - 01 变量与数据类型: Python面试实践/00_零基础入门/01_变量与数据类型.md
       - 02 输入输出与运算符: Python面试实践/00_零基础入门/02_输入输出与运算符.md
       - 03 条件判断: Python面试实践/00_零基础入门/03_条件判断.md
       - 04 循环: Python面试实践/00_零基础入门/04_循环.md
       - 05 字符串操作详解: Python面试实践/00_零基础入门/05_字符串操作详解.md
       - 06 函数基础: Python面试实践/00_零基础入门/06_函数基础.md
-    - 01 Python 语言特性:
-      - 核心概念与面试答题模板: Python面试实践/01_Python语言特性/01_核心概念与面试答题模板.md
-    - 02 数据结构与常用库:
-      - 内置数据结构从入门到面试: Python面试实践/02_数据结构与常用库/01_内置数据结构从入门到面试.md
-    - 03 面试高频手撕题:
+    - Python 面试实践:
+      - 语言特性答题模板: Python面试实践/01_Python语言特性/01_核心概念与面试答题模板.md
+      - 内置数据结构: Python面试实践/02_数据结构与常用库/01_内置数据结构从入门到面试.md
+      - 异常与上下文管理: Python面试实践/02_数据结构与常用库/02_异常与上下文管理面试页.md
+      - 异步与并发: Python面试实践/04_Python进阶面试题/01_异步与并发面试页.md
+    - 高频手撕题:
       - 01 最长不重复子串: Python面试实践/03_面试高频手撕题/01_最长不重复子串.md
       - 02 快速排序: Python面试实践/03_面试高频手撕题/02_快速排序.md
       - 03 LRU 缓存: Python面试实践/03_面试高频手撕题/03_LRU缓存.md
@@ -156,7 +187,14 @@ nav:
       - 05 TopK 问题: Python面试实践/03_面试高频手撕题/05_TopK问题.md
       - 06 二分查找: Python面试实践/03_面试高频手撕题/06_二分查找.md
       - 07 动态规划_爬楼梯: Python面试实践/03_面试高频手撕题/07_动态规划_爬楼梯.md
-
-  - Git 面试实践:
-    - 01 核心概念与面试答题模板: Git面试实践/01_核心概念与面试答题模板.md
-    - 02 Git 进阶与实战: Git面试实践/02_Git进阶与实战.md
+  - 学习路径与速查:
+    - 总览: 学习路径与速查/index.md
+    - 七天速通训练营:
+      - 总览: AI Agent面试实践/99_七天速通训练营/index.md
+      - Day 1 Agent 全景: AI Agent面试实践/99_七天速通训练营/01_Day1_Agent全景.md
+      - Day 2 RAG 与检索: AI Agent面试实践/99_七天速通训练营/02_Day2_RAG与检索.md
+      - Day 3 Tool 与 MCP: AI Agent面试实践/99_七天速通训练营/03_Day3_Tool与MCP.md
+      - Day 4 LangGraph 与记忆: AI Agent面试实践/99_七天速通训练营/04_Day4_LangGraph与记忆.md
+      - Day 5 Eval 与安全: AI Agent面试实践/99_七天速通训练营/05_Day5_Eval与安全.md
+      - Day 7 模拟面试冲刺: AI Agent面试实践/99_七天速通训练营/07_Day7_模拟面试冲刺.md
+      - 知识卡片速查: AI Agent面试实践/99_七天速通训练营/知识卡片速查.md

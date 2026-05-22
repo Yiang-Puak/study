@@ -1,8 +1,14 @@
 # Context 工程核心概念与面试考点
 
-> 基于 Anthropic 官方工程博客与生产实践整理
+> 本页负责原理讲解。先看专题总览可回 [Context 与 Memory 工程专题](index.md)，背题转到 [高频八股](05_Context与Memory高频八股.md)。
 
----
+## 一句话定义
+
+Context Engineering 是在有限上下文预算内，为当前推理挑选最高信号密度信息的工程方法。
+
+## 为什么重要
+
+长任务里的指令、历史、证据、记忆和工具结果会同时争夺上下文预算。窗口变大能缓解容量问题，但不能替代筛选、压缩、持久化和检索。
 
 ## 一、什么是 Context Engineering
 
@@ -15,7 +21,7 @@
 | **核心挑战** | 指令清晰度 | 信息筛选、压缩、持久化 |
 | **技术栈** | 模板、Few-shot | Compaction、Memory、RAG |
 
-**一句话定义**：Context Engineering 是"在有限的上下文窗口内，为模型提供最高信号密度信息"的艺术与科学。
+**一句话定义**：Context Engineering 是“在有限的上下文窗口内，为模型提供最高信号密度信息”的艺术与科学。
 
 ---
 
@@ -93,7 +99,31 @@ Agent 循环中每轮产生的新数据：
 
 ---
 
-## 四、面试高频考点
+## 四、工程实践
+
+| 实践节点 | 要回答的问题 |
+| :--- | :--- |
+| Context Budget | 本轮给 Prompt、历史、证据和工具结果分别留多少预算 |
+| Recent History | 哪些最近消息保留原文 |
+| Summary | 哪些早期过程压成结论 |
+| Notes / State | 哪些任务信息写到上下文外 |
+| Retrieval | 哪些知识或记忆按需拉回 |
+
+## 五、常见误区
+
+| 误区 | 修正 |
+| :--- | :--- |
+| 只要模型窗口够长就不用压缩 | 上下文还受噪声、成本和关键信号排序影响 |
+| 压缩就是删历史 | 更稳的是保留目标、约束、决策、失败和未完成项 |
+| Memory 写得越多越好 | 写入和召回都要有策略 |
+| Tool 结果原样留下最安全 | 原始输出常很长，保留观察结论和引用更稳 |
+
+## 六、面试训练入口
+
+- [Context 与 Memory 高频八股](05_Context与Memory高频八股.md)
+- [Context 与 Memory 真题与工程追问](06_Context与Memory真题与工程追问.md)
+
+## 七、面试高频考点
 
 ### 考点 1：Context Engineering vs Prompt Engineering
 
@@ -123,7 +153,7 @@ Agent 循环中每轮产生的新数据：
 
 ---
 
-## 五、与现有知识体系的关系
+## 八、与现有知识体系的关系
 
 ```
 Agent 基础架构（ReAct / MultiAgent）
@@ -147,7 +177,7 @@ Prompt 工程（指令优化）
 
 ---
 
-## 六、推荐阅读
+## 九、推荐阅读
 
 - [Anthropic: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [Manus: Context Engineering Lessons](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus)

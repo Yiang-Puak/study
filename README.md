@@ -1,15 +1,9 @@
-# AI 面试学习知识库
+# AI Agent 工程学习手册
 
-> 基于 MkDocs Material 构建的个人面试知识库，聚焦 **AI Agent、Python、Git、Vibe Coding 流程和综合面试模拟题**。  
-> 当前项目已清理学习进度、遗漏检查和个人问答准备类内容，只保留详细知识点、代码实践和面试模拟题。
+> 基于 MkDocs Material 构建的公开学习站点，聚焦 **AI Agent、Python 与面试真题训练**。
+> 站点只保留知识点讲解、代码实践、真题追问、学习路线和速查材料，不发布离线参考素材与个人化信息。
 
-## 在线访问
-
-```text
-https://Yiang-Puak.github.io/study/
-```
-
-站点支持：
+## 站点能力
 
 - 全文搜索
 - 深色 / 浅色模式
@@ -19,44 +13,27 @@ https://Yiang-Puak.github.io/study/
 
 ## 内容结构
 
-### AI Agent 面试实践
+### Agent 工程体系
 
-围绕 AI Agent 面试高频概念进行系统整理：
+围绕“知识点 -> 实践 -> 八股 -> 真题追问”整理 Agent 主线：
 
-- AI 系统底层框架全景图
-- LLM 与 Token 底层原理
-- Context Window、Memory、RAG
-- Agent 基础架构、Agentic Loop、ReAct、Function Call
-- Multi-Agent 协作
-- LangChain / LangGraph
-- Prompt 工程
-- Harness 工程
-- Tool 与 MCP 工程实践
-- Explore-Plan-Act 与 Agent Skill
-- AI Agent 综合模拟面试题库
+- Agent 总览与基础架构
+- Context 与 Memory
+- RAG 检索工程
+- Tool Calling 与 MCP
+- Workflow、LangGraph 与 Multi-Agent
+- Eval、Trace 与 Safety
+- 规划、Skill、Prompt 与工程复盘
 
-### Vibe Coding 流程
+### 面试题库
 
-整理如何借助 AI 编程工具完成一个真实项目：
+用于把专题理解压缩成可训练输出：
 
-- 需求澄清
-- PRD 编写
-- 技术方案设计
-- 任务拆解
-- Prompt 设计
-- 迭代开发
-- 测试验收
-- 部署交付
-- 复盘优化
-
-### 综合面试冲刺
-
-用于集中复习跨方向的综合材料：
-
-- 项目介绍表达
-- 面试答题结构
-- 高频综合问题
-- 面试前快速复盘
+- 高频八股
+- 工程追问
+- 公开真题整理
+- Python 面试真题
+- 模拟口述训练
 
 ### Python 面试实践
 
@@ -71,13 +48,12 @@ https://Yiang-Puak.github.io/study/
 - 内置数据结构
 - 滑动窗口、快速排序、LRU、TopK、二分查找、动态规划等题型
 
-### Git 面试实践
+## 推荐学习顺序
 
-整理 Git 面试和日常工程协作必备内容：
-
-- Git 核心概念
-- 分支、提交、合并、冲突处理
-- Git 进阶与实战
+1. 从首页进入 Agent 学习地图，先建立模型、上下文、检索、工具、编排和治理的依赖关系。
+2. 每个 Agent 核心专题先看学习页，再看代码实践，最后刷八股和真题追问。
+3. Python 先补语法和容器，再补语言特性，最后练手撕题与口述复杂度。
+4. 面试前只走题库训练路线，把答不清的题回流到专题页。
 
 ## 本地预览
 
@@ -93,7 +69,7 @@ python -m mkdocs serve -a 127.0.0.1:8000
 http://127.0.0.1:8000
 ```
 
-如果站点使用 `site_url` 跳转到 `/study/`，也可以访问：
+如果部署环境配置了子路径，也可以按部署路径访问：
 
 ```text
 http://127.0.0.1:8000/study/
@@ -115,13 +91,9 @@ python -m mkdocs build --strict -f "<project-root>\mkdocs.yml"
 
 ## 自动部署
 
-项目使用 GitHub Actions 自动部署到 GitHub Pages。
+项目可使用 GitHub Actions 自动部署到静态站点托管环境。
 
-推送到 `main` 分支后，会自动构建并发布到：
-
-```text
-https://Yiang-Puak.github.io/study/
-```
+推送到发布分支后，由部署配置决定最终访问地址。
 
 常用提交命令：
 
@@ -147,10 +119,10 @@ git -C "<project-root>" push origin main
 - GitHub Actions
 - GitHub Pages
 
-## 项目原则
+## 发布边界
 
-- 不保留个人隐私信息
-- 不保留学习进度跟踪类页面
-- 不保留遗漏检查类页面
-- 内容以详细知识点和面试模拟题为主
-- 每次重要调整后使用 `mkdocs build --strict` 验证
+- 不发布个人隐私、个人背景、投递计划和求职画像。
+- 不发布离线参考报告 `deep-research-report*.md`。
+- 不发布 MkDocs 生成目录 `site/`。
+- 内容只围绕 Agent、Python 与面试题训练展开。
+- 每次重要调整后优先使用 `python -m mkdocs build --strict` 验证。
