@@ -57,3 +57,9 @@ graph LR
 - [OpenAI Agent Evals](https://platform.openai.com/docs/guides/agent-evals)
 - [OpenAI Trace Grading](https://platform.openai.com/docs/guides/graders)
 - [OWASP LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
+
+## 相关题目
+
+- [Eval、Trace 与 Safety 高频题](02_EvalTraceSafety高频八股.md)
+- [Eval、Trace 与 Safety 真题与工程追问](03_EvalTraceSafety真题与工程追问.md)
+- [回到面试题库](../../面试题库/index.md)

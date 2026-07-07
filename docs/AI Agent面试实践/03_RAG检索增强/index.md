@@ -47,3 +47,9 @@ graph LR
 - 想理解 RAG 与长上下文、Memory 的边界：回到 [学习地图](../学习地图.md) 的 Context 阶段。
 - 想把知识挂到项目复盘：进入 [项目实战与复盘](../../项目实战与复盘/index.md)。
 - 想继续连接外部能力：进入 [Tool 与 MCP 专题](../09_Tool与MCP工程实践/index.md)。
+
+## 相关题目
+
+- [RAG 高频题](03_RAG高频八股.md)
+- [RAG 真题与工程追问](04_RAG真题与工程追问.md)
+- [继续学习 Tool 与 MCP](../09_Tool与MCP工程实践/index.md)

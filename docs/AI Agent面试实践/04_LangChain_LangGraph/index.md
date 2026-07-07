@@ -60,3 +60,9 @@ graph LR
 
 - [LangGraph Workflows and Agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents)
 - [LangGraph Overview](https://docs.langchain.com/oss/python/langgraph/overview)
+
+## 相关题目
+
+- [Workflow 与 LangGraph 高频题](03_Workflow与LangGraph高频八股.md)
+- [Workflow 与 LangGraph 真题与工程追问](04_Workflow与LangGraph真题与工程追问.md)
+- [继续学习 Eval、Trace 与 Safety](../11_EvalTraceSafety/index.md)

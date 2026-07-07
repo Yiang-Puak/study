@@ -64,3 +64,9 @@
 - [Tool 设计原则与容错](01_Tool设计原则与容错.md)
 - [MCP 协议核心概念](02_MCP协议核心概念.md)
 - [Tool 与 MCP 真题追问](04_Tool与MCP真题与工程追问.md)
+
+## 回补知识点
+
+- [Tool 设计原则与容错](01_Tool设计原则与容错.md)
+- [Tool 与 MCP 专题入口](index.md)
+- [相关专题题页](04_Tool与MCP真题与工程追问.md)

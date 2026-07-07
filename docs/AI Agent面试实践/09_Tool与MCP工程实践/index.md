@@ -69,3 +69,9 @@ Safety 看权限与副作用
 - [OpenAI Function Calling 文档](https://platform.openai.com/docs/guides/function-calling)
 - [MCP Architecture](https://modelcontextprotocol.io/docs/learn/architecture)
 - [MCP Server Concepts](https://modelcontextprotocol.io/docs/learn/server-concepts)
+
+## 相关题目
+
+- [Tool 与 MCP 高频题](03_Tool与MCP高频八股.md)
+- [Tool 与 MCP 真题与工程追问](04_Tool与MCP真题与工程追问.md)
+- [继续学习 Workflow 与 LangGraph](../04_LangChain_LangGraph/index.md)

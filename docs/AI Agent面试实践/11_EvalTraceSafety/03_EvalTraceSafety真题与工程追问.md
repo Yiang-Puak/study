@@ -44,3 +44,9 @@
 1. 回 [学习页](01_EvalTraceSafety学习页.md) 校准指标与边界。
 2. 对照 [Harness 工程](../07_Harness工程深入/01_Harness核心理念与面试考点.md) 看长任务执行环境。
 3. 用 [高频八股](02_EvalTraceSafety高频八股.md) 压短答案。
+
+## 回补知识点
+
+- [Eval、Trace 与 Safety 专题入口](index.md)
+- [Eval、Trace 与 Safety 学习页](01_EvalTraceSafety学习页.md)
+- [相关高频题](02_EvalTraceSafety高频八股.md)

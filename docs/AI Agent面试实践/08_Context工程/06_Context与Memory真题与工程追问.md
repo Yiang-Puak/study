@@ -57,3 +57,9 @@
 1. 回 [Context 学习页](01_Context工程核心概念与面试考点.md) 校准原理。
 2. 对照 [Context 压缩实践](02_Context压缩与总结实践.md) 和 [持久化记忆](03_结构化笔记与持久化记忆.md) 看落点。
 3. 用 [高频八股](05_Context与Memory高频八股.md) 压短答案。
+
+## 回补知识点
+
+- [Context 与 Memory 专题入口](index.md)
+- [Context 学习页](01_Context工程核心概念与面试考点.md)
+- [相关高频题](05_Context与Memory高频八股.md)

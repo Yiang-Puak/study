@@ -45,3 +45,9 @@ graph LR
 会收口
 才像 Agent
 ```
+
+## 相关题目
+
+- [Agent 基础高频题](05_Agent基础高频八股.md)
+- [Agent 基础真题与工程追问](06_Agent基础真题与工程追问.md)
+- [继续学习 Tool 与 MCP](../09_Tool与MCP工程实践/index.md)

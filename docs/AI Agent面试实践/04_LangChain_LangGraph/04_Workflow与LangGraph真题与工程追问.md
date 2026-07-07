@@ -45,3 +45,9 @@
 1. 回 [专题入口](index.md) 先看选择逻辑。
 2. 对照 [LangGraph 代码实践](02_LangGraph_多Agent工作流.md) 找到 State、Node、Router。
 3. 用 [高频八股](03_Workflow与LangGraph高频八股.md) 练口述。
+
+## 回补知识点
+
+- [Workflow 与 LangGraph 专题入口](index.md)
+- [Workflow 与 LangGraph 学习页](01_核心概念与面试答题模板.md)
+- [相关高频题](03_Workflow与LangGraph高频八股.md)

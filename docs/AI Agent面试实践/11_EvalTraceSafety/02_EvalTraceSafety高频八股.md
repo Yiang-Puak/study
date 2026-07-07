@@ -47,3 +47,9 @@
 - [专题入口](index.md)
 - [学习页](01_EvalTraceSafety学习页.md)
 - [真题与工程追问](03_EvalTraceSafety真题与工程追问.md)
+
+## 回补知识点
+
+- [Eval、Trace 与 Safety 学习页](01_EvalTraceSafety学习页.md)
+- [Eval、Trace 与 Safety 专题入口](index.md)
+- [相关专题题页](03_EvalTraceSafety真题与工程追问.md)
