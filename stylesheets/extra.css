@@ -485,9 +485,18 @@
 
 .md-content {
     background: transparent;
-    max-width: 940px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 2rem;
+}
+
+.md-content__inner {
+    margin: 0 auto;
+    max-width: 920px;
+}
+
+.md-main__inner {
+    column-gap: 1.2rem;
 }
 
 /* ---------- 学习首页卡片 ---------- */
@@ -575,6 +584,9 @@
 @media (max-width: 768px) {
     .md-content {
         padding: 1rem;
+    }
+    .md-content__inner {
+        max-width: none;
     }
     .study-grid {
         grid-template-columns: 1fr;
